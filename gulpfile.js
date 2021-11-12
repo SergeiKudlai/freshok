@@ -14,7 +14,7 @@ const autoprefixer = require('gulp-autoprefixer');
 //постоянна для удаления контента ,объектов
 const del = require('del');
 //постоянная для минифицирования картинок
-const imagemin = require('gulp-image');
+//const imagemin = require('gulp-image');
 
 
 //создаём функцию задаём имя browsersync для создания сервера

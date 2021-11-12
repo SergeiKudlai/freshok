@@ -1,0 +1,19 @@
+
+@mixin padd ($padd...) {
+    padding: $padd;
+}
+
+@mixin mar ($mar...) {
+    margin: $mar;
+}
+
+@mixin font ($fz,$lh,$fw) {
+    font-size: $fz;
+    line-height: $lh;
+    font-weight: $fw;
+}
+
+@mixin wh ($w,$h) {
+    width: $w;
+    height: $h;
+}

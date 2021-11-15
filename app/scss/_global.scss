@@ -1,6 +1,5 @@
-@import 'variables';
-@import 'mixin';
-
+@import "variables";
+@import "mixin";
 
 html,
 body {
@@ -22,30 +21,30 @@ body {
 }
 
 body {
-  font-size: 14px;
+	font-size: 14px;
 	line-height: 1.4;
 	font-weight: 600;
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans", sans-serif;
 	background-color: $white;
 	color: $black;
 }
 
-.container{
-  max-width: $cont_width;
-  @include mar (0 auto);
-  @include padd (0 15px);
+.container {
+	max-width: $cont_width;
+	@include mar(0 auto);
+	@include padd(0 15px);
 }
 
 .sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
 }
 
 .logo {
@@ -59,6 +58,21 @@ body {
 	font-size: 18px;
 	line-height: 1.3;
 	border-radius: 6px;
+	outline: transparent;
+	transition: background-color 0.5s ease-in-out;
+
+	&:hover {
+		background-color: $focus;
+	}
+
+	&:focus {
+		box-shadow: 0 0 0 4px rgba(99, 166, 14, 0.5);
+		border-radius: 6px;
+	}
+
+	&:active {
+		box-shadow: inset 0 10px 4px rgba(0, 0, 0, 0.1);
+	}
 }
 
 .title {
@@ -66,11 +80,5 @@ body {
 	font-size: 32px;
 	letter-spacing: 0.48px;
 	text-transform: uppercase;
-	font-family: 'ruda', sans-serif;
+	font-family: "ruda", sans-serif;
 }
-
-
-
-
-
-

@@ -1,6 +1,6 @@
 //gulpfile для ввода команд в gulp
 //создаём переменные которым передаём возможности gulp
-const {src, dest, watch, parallel, series} = require('gulp');
+const { src, dest, watch, parallel, series } = require('gulp');
 /*создаём переменную scss передаём с помощью команды require все возможности gulp-sass а также sass который конвертирует css в scss*/
 const scss = require('gulp-sass')(require('sass'));
 //постоянная concat которой передаём возможности gulp-concat который объеденяет все файлы в один
@@ -14,7 +14,7 @@ const autoprefixer = require('gulp-autoprefixer');
 //постоянна для удаления контента ,объектов
 const del = require('del');
 //постоянная для минифицирования картинок
-//const imagemin = require('gulp-image');
+//const imagemin = require('gulp-imagemin');
 
 
 //создаём функцию задаём имя browsersync для создания сервера
@@ -39,16 +39,17 @@ function cleanDist() {
 //фукнция для минимизирования и сжатия картинок
 function images() {
 	return src('app/images/**/*.*')
-		.pipe(imagemin({
-			optipng: ['-i 1', '-strip all', '-fix', '-o7', '-force'],
-			pngquant: ['--speed=1', '--force', 256],
-			zopflipng: ['-y', '--lossy_8bit', '--lossy_transparent'],
-			jpegRecompress: ['--strip', '--quality', 'medium', '--min', 40, '--max', 80],
-			mozjpeg: ['-optimize', '-progressive'],
-			gifsicle: ['--optimize'],
-			svgo: ['--enable', 'cleanupIDs', '--disable', 'convertColors']
-		}))
-		//выкидывает в папку
+		.pipe(imagemin([
+			imagemin.gifsicle({ interlaced: true }),
+			imagemin.mozjpeg({ quality: 75, progressive: true }),
+			imagemin.optipng({ optimizationLevel: 5 }),
+			imagemin.svgo({
+				plugins: [
+					{ removeViewBox: true },
+					{ cleanupIDs: false }
+				]
+			})
+		]))
 		.pipe(dest('dist/images'))
 }
 

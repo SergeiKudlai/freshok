@@ -128,4 +128,4 @@ exports.build = series(cleanDist, build);``
 
 //таск по дефолту(defult) прописывая в терминале gulp запускаеться заданое значение 
 //свойства parallel разрешает запускать одновременно несколько задач в терминале
-exports.default = parallel(scripts, browsersync, watching);
+exports.default = parallel(styles,scripts, browsersync, watching);

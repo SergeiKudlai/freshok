@@ -13,6 +13,7 @@ const uglify = require('gulp-uglify-es').default;
 const autoprefixer = require('gulp-autoprefixer');
 //постоянна для удаления контента ,объектов
 const del = require('del');
+const svgSprite = require('gulp-svg-sprite');
 
 
 
@@ -34,6 +35,17 @@ function cleanDist() {
 	return del('dist')
 }
 
+function svgSprit() {
+	return src('app/svg/*.svg')
+		.pipe(svgSprite({
+			mode: {
+				stack: {
+					sprite: '../sprite.svg'
+				}
+			}
+		}))
+		.pipe(dest('app/images'))
+}
 
 //создаём функцию scripts для работы с js
 function scripts() {
@@ -121,6 +133,7 @@ exports.browsersync = browsersync;
 exports.scripts = scripts;
 //запуск функции удаления папки дист
 exports.cleanDist = cleanDist;
+exports.svgSprit = svgSprit;
 
 //series свойства gulp выполнять по очереди как заданно
 exports.build = series(cleanDist, build);``
@@ -128,4 +141,4 @@ exports.build = series(cleanDist, build);``
 
 //таск по дефолту(defult) прописывая в терминале gulp запускаеться заданое значение 
 //свойства parallel разрешает запускать одновременно несколько задач в терминале
-exports.default = parallel(styles,scripts, browsersync, watching);
+exports.default = parallel(styles,scripts, browsersync,svgSprit,watching);

@@ -82,3 +82,23 @@ body {
 	text-transform: uppercase;
 	font-family: "ruda", sans-serif;
 }
+
+#face {
+	fill: red;
+}
+
+.faceebok {
+	@include wh (16px,32px);
+}
+
+.yutobe {
+	@include wh(32px, 22px);
+}
+
+.twiter {
+	@include wh(32px, 26px);
+}
+
+.instagram {
+	@include wh(32px, 32px);
+}

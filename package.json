@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "del": "^6.0.0",
-    "gulp-imagemin": "^8.0.0"
+    "gulp-imagemin": "^8.0.0",
+    "gulp-svg-sprite": "^1.5.0"
   }
 }

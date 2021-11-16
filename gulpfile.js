@@ -13,8 +13,7 @@ const uglify = require('gulp-uglify-es').default;
 const autoprefixer = require('gulp-autoprefixer');
 //постоянна для удаления контента ,объектов
 const del = require('del');
-//постоянная для минифицирования картинок
-//const imagemin = require('gulp-imagemin');
+
 
 
 //создаём функцию задаём имя browsersync для создания сервера
@@ -33,24 +32,6 @@ function browsersync() {
 //удаляет папку дист
 function cleanDist() {
 	return del('dist')
-}
-
-
-//фукнция для минимизирования и сжатия картинок
-function images() {
-	return src('app/images/**/*.*')
-		.pipe(imagemin([
-			imagemin.gifsicle({ interlaced: true }),
-			imagemin.mozjpeg({ quality: 75, progressive: true }),
-			imagemin.optipng({ optimizationLevel: 5 }),
-			imagemin.svgo({
-				plugins: [
-					{ removeViewBox: true },
-					{ cleanupIDs: false }
-				]
-			})
-		]))
-		.pipe(dest('dist/images'))
 }
 
 
@@ -138,14 +119,12 @@ exports.watching = watching;
 exports.browsersync = browsersync;
 //запуск функции java scripts
 exports.scripts = scripts;
-//запуск функции сжатия картинок
-exports.images = images;
 //запуск функции удаления папки дист
 exports.cleanDist = cleanDist;
 
 //series свойства gulp выполнять по очереди как заданно
-//exports.build = series(cleanDist, build);``
-exports.build = series(cleanDist, images, build);
+exports.build = series(cleanDist, build);``
+
 
 //таск по дефолту(defult) прописывая в терминале gulp запускаеться заданое значение 
 //свойства parallel разрешает запускать одновременно несколько задач в терминале

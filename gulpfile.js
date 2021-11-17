@@ -13,7 +13,7 @@ const uglify = require('gulp-uglify-es').default;
 const autoprefixer = require('gulp-autoprefixer');
 //постоянна для удаления контента ,объектов
 const del = require('del');
-const svgSprite = require('gulp-svg-sprite');
+const sprite = require('gulp-svg-sprite');
 
 
 
@@ -35,17 +35,34 @@ function cleanDist() {
 	return del('dist')
 }
 
-function svgSprit() {
-	return src('app/svg/*.svg')
-		.pipe(svgSprite({
+function svgSprite() {
+	return src('app/images/svg/styles__svg/**/*.svg')
+		.pipe(sprite({
 			mode: {
 				stack: {
 					sprite: '../sprite.svg'
 				}
+			},
+			shape: {
+				transform:[
+					{
+						svgo:{
+							plugins:[
+								{
+									removeAttrs:{
+										attrs:['class','data-name','fill','stroke.*']
+									}
+								},
+								{removeXMLNS:true},
+							]
+						}
+					}
+				]
 			}
 		}))
 		.pipe(dest('app/images'))
 }
+
 
 //создаём функцию scripts для работы с js
 function scripts() {
@@ -79,7 +96,7 @@ function styles() {
 	])
 		//передаём возможности конвертации благодаря постоянной scss
 		//compressed,expanded добовляет минифицированость в файле css все пишеться в одну строку
-		.pipe(scss({ outputStyle: 'expanded' }))
+		.pipe(scss({ outputStyle: 'compressed' }))
 		//постоянная concat может переиминовывать файлы а также обхеденять js scss html 
 		.pipe(concat('style.min.css'))
 		//пред тем как внести в папку подключаем автопрефиксер отслеживает на 10 последних версиях браузера,работает с гридами
@@ -116,6 +133,7 @@ function watching() {
 	//**за всеми внутринними файлами и папками *за всеми файлами с расширениями .scss
 	//при появлении изменений в папке scss функция watching запускает функцию styles
 	watch(['app/scss/**/*.scss'], styles);
+	watch(['app/images/svg/styles__svg/**/*.svg'],svgSprite);
 	//при появлении изменений в папке js функция запускает функцию scripts
 	//следит за всеми файлами js кроме > ! перестаёт следить за файлом main.min.js        
 	watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
@@ -133,12 +151,12 @@ exports.browsersync = browsersync;
 exports.scripts = scripts;
 //запуск функции удаления папки дист
 exports.cleanDist = cleanDist;
-exports.svgSprit = svgSprit;
+exports.svgSprite = svgSprite;
 
 //series свойства gulp выполнять по очереди как заданно
-exports.build = series(cleanDist, build);``
+exports.build = series(cleanDist, build);
 
 
 //таск по дефолту(defult) прописывая в терминале gulp запускаеться заданое значение 
 //свойства parallel разрешает запускать одновременно несколько задач в терминале
-exports.default = parallel(styles,scripts, browsersync,svgSprit,watching);
+exports.default = parallel(styles,scripts, browsersync,svgSprite,watching);

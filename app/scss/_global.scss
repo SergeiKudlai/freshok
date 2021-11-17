@@ -83,12 +83,10 @@ body {
 	font-family: "ruda", sans-serif;
 }
 
-#face {
-	fill: red;
-}
+
 
 .faceebok {
-	@include wh (16px,32px);
+	@include wh(16px, 32px);
 }
 
 .yutobe {

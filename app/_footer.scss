@@ -96,16 +96,23 @@
     font-weight: 400;
     align-items: center;
 
+    &__item {
+      transition: opacity 0.5s ease-in-out;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+
     &__link {
       margin-right: 12px;
       display: inline-block;
       outline: transparent;
 
       &:focus {
-        box-shadow: 0 0 0 3px #e0edcf;
+        box-shadow: 0px 0px 0px 3px #e0edcf;
         border-radius: 3px;
       }
-
     }
   }
 
@@ -130,4 +137,3 @@
     }
   }
 }
-

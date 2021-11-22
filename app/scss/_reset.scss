@@ -16,17 +16,18 @@ ul {
   list-style: none;
 }
 
-p,
+
 ul,
 ol,
-li,
 figure,
 figcaption,
 blockquote {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
+p,
+li,
 h1,
 h2,
 h3,
@@ -37,8 +38,9 @@ label,
 blockquote,
 cite {
   font: inherit;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  letter-spacing: inherit;
 }
 
 
@@ -48,18 +50,15 @@ img {
   display: block;
 }
 
-textarea,
-select {
-  font: inherit;
-  padding: 0;
-  margin: 0;
-}
 
 input,
-button {
+select,
+button,
+textarea {
   border: none;
 	background-color: transparent;
   font: inherit;
+  letter-spacing: inherit;
   padding: 0;
   margin: 0;
 }
@@ -76,7 +75,6 @@ a{
 
 textarea {
   resize: vertical;
-  font: inherit;
 }
 
 

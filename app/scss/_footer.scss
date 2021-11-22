@@ -1,0 +1,164 @@
+.footer {
+  color: $white;
+  background-color: $black-800;
+
+  &__top {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &__logo {
+    display: inline-block;
+    margin-bottom: 23px;
+  }
+
+  &__form {
+    margin-right: 150px;
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  .form-search {
+    max-width: 306px;
+    width: 100%;
+    flex-grow: 1;
+
+    &::after {
+      display: none;
+    }
+
+    &__text {
+      margin-bottom: 18px;
+      display: inline-block;
+      line-height: 1;
+      font-weight: 400;
+    }
+
+    &__inner {
+      position: relative;
+    }
+
+    &__input {
+      padding-bottom: 11px;
+      padding-top: 11px;
+      padding-left: 12px;
+      padding-right: 140px;
+      line-height: 1;
+      letter-spacing: 0;
+      color: $silver-400;
+
+      &::placeholder {
+        line-height: 1;
+        letter-spacing: 0;
+        color: $silver-400;
+      }
+    }
+
+    &__button {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      padding-left: 16px;
+      padding-right: 16px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0;
+      background-color: $green;
+    }
+  }
+
+  &__list {
+    margin-right: 80px;
+  }
+
+  &__bottom {
+    padding-top: 19px;
+    padding-bottom: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+.address {
+  &__list {
+    margin-bottom: 21px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 19px;
+    }
+  }
+
+  &__link {
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+
+  &__link {
+    display: inline-block;
+    background-repeat: no-repeat;
+    outline: transparent;
+    transition: opacity 0.5s ease-in-out;
+
+    &--facebook {
+      width: 15px;
+      height: 32px;
+      margin-right: 20px;
+    }
+
+    &--youtube {
+      width: 32px;
+      height: 23px;
+      margin-right: 11px;
+    }
+
+    &--twitter {
+      width: 32px;
+      height: 27px;
+      margin-right: 13px;
+    }
+
+    &--instagram {
+      width: 32px;
+      height: 32px;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px #e0edcf;
+      border-radius: 3px;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.copyrigh {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__link {
+    font-weight: 400;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+}

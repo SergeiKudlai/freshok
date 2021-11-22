@@ -1,0 +1,133 @@
+.stock {
+  padding-top: 74px;
+  padding-bottom: 72px;
+  position: relative;
+  background-color: $stock_bg;
+
+  &__title {
+    margin-bottom: 34px;
+  }
+
+  &__button {
+    margin-bottom: 48px;
+    justify-content: center;
+
+    .variety__item {
+     
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  &__inner {
+    margin-bottom: 48px;
+  }
+
+  .badges {
+    &__item {
+      margin-bottom: 0;
+    }
+  }
+
+  .products-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 12px;
+    padding-bottom: 13px;
+    padding-left: 10px;
+    padding-right: 12px;
+    max-height: 124px;
+    height: 100%;
+
+    &__images {
+      margin-top: 0;
+      margin-right: 12px;
+      max-height: 100%;
+    }
+
+    &__img {
+      width: 100%;
+      height: 100%;
+      min-height: 100%;
+    }
+
+    &__info {
+      padding: 0;
+      max-width: 164px;
+      width: 100%;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    &__name {
+      height: 100%;
+      margin-bottom: 0;
+    }
+
+    &__availability {
+      font-size: 10px;
+      line-height: 1;
+      letter-spacing: 0.48px;
+      text-transform: uppercase;
+
+      &--green {
+        color: $green;
+      }
+
+      &--red {
+        color: $red-900;
+      }
+
+      &--silver {
+        color: $silver-600;
+      }
+    }
+  }
+
+  .prices {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+
+    &__item {
+      font-size: 20px;
+      font-weight: 600;
+
+      &:not(:last-child) {
+        margin-right: 23px;
+      }
+
+      &--old {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__btn {
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+.raiting {
+  display: flex;
+  align-items: center;
+
+  &__text {
+    color: $dark-500;
+    font-weight: 700;
+    line-height: 1;
+    display: inline-block;
+    letter-spacing: 0.48px;
+    margin-right: 2px;
+  }
+
+  &__button {
+    width: 16px;
+    height: 15px;
+    mask: url("../images/sprite.svg#icon-raiting") no-repeat center/ cover;
+    background-color: #ffb800;
+  }
+}

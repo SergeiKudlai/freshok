@@ -1,0 +1,68 @@
+.services {
+  margin-bottom: 72px;
+  background-color: $header-services_bg;
+  padding-top: 50px;
+  padding-bottom: 31px;
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__box {
+    max-width: 264px;
+    width: 100%;
+    padding-left: 74px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: $green;
+      width: 50px;
+      height: 50px;
+    }
+
+    &--motorbike {
+      margin-right: 65px;
+      
+      &::before {
+        mask-image: url("../images/sprite.svg#icon-motorbike");
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: cover;
+        width: 55px;
+      }
+    }
+
+    &--return {
+      margin-right: 66px;
+
+      &::before {
+        mask: url("../images/sprite.svg#icon-return")no-repeat center/cover;
+      }
+    }
+
+    &--clock {
+      
+      &::before {
+        mask: url("../images/sprite.svg#icon-clock")no-repeat center/cover;
+      }
+    }
+  }
+
+  &__text {
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+
+  &__content {
+    display: inline-block;
+    color: $dark-500;
+    font-weight: 400;
+    max-width: 187px;
+  }
+}

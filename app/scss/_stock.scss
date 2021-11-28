@@ -6,22 +6,68 @@
 
   &__title {
     margin-bottom: 34px;
+
+    @include media-4 {
+     margin-bottom: 25px;
+    }
   }
 
   &__button {
     margin-bottom: 48px;
     justify-content: center;
 
-    .variety__item {
-     
-      &:not(:last-child) {
-        margin-right: 30px;
+    .variety {
+      &__item {
+
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
+
+        @include media-4 {
+          margin-bottom: 0;
+        }
       }
+    }
+
+    @include media-4 {
+      margin-bottom: 27px;
+    }
+  }
+
+  .variety {
+
+    &__item {
+
+      @include media-4 {
+       margin-right: 0;
+      }
+    }
+    @include media-4 {
+      max-width: 100%;
     }
   }
 
   &__inner {
     margin-bottom: 48px;
+
+    @include media-1 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include media-2 {
+      grid-gap: 15px;
+    }
+
+    @include media-3 {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+    }
+
+    @include media-4 {
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      grid-gap: 15px;
+      margin-bottom: 24px;
+    }
   }
 
   .badges {
@@ -38,19 +84,17 @@
     padding-bottom: 13px;
     padding-left: 10px;
     padding-right: 12px;
-    max-height: 124px;
     height: 100%;
 
     &__images {
-      margin-top: 0;
+      margin-top: auto;
       margin-right: 12px;
-      max-height: 100%;
     }
 
     &__img {
       width: 100%;
-      height: 100%;
-      min-height: 100%;
+      max-height: 97px;
+      min-height: 97px;
     }
 
     &__info {
@@ -64,6 +108,10 @@
     &__name {
       height: 100%;
       margin-bottom: 0;
+
+      @include media-4 {
+       margin-top: -1px;
+      }
     }
 
     &__availability {
@@ -83,6 +131,13 @@
       &--silver {
         color: $silver-600;
       }
+    }
+
+    @include media-4 {
+      max-width: 300px;
+      margin: 0 auto;
+      min-height: 124px;
+      max-height: 124px;
     }
   }
 
@@ -108,6 +163,10 @@
   &__btn {
     margin: 0 auto;
     display: block;
+  }
+
+  @include media-3 {
+    padding-top: 50px;
   }
 }
 

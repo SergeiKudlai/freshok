@@ -3,6 +3,10 @@
 
   &__inner {
     display: flex;
+
+    @include media-2 {
+     flex-direction: column;
+    }
   }
 
   &__item {
@@ -12,11 +16,21 @@
     padding-top: 69px;
     padding-bottom: 82px;
     padding-left: 32px;
+    padding-right: 15px;
     text-transform: uppercase;
     color: $dark-500;
 
     &:not(:last-child) {
       margin-right: 30px;
+
+      @include media-1 {
+       margin-right: 15px;
+      }
+
+      @include media-2 {
+       margin-right: 0;
+       margin-bottom: 15px;
+      }
     }
 
 
@@ -36,6 +50,16 @@
       max-width: 300px;
       width: 100%;
     }
+
+    @include media-1 {
+     padding-left: 16px;
+    }
+
+    @include media-2 {
+     max-width: 100%;
+     padding-top: 74px;
+     padding-bottom: 36px;
+    }
   }
 
   &__text {
@@ -45,6 +69,10 @@
     letter-spacing: 1.6px;
     margin-bottom: 18px;
     font-weight: 700;
+
+    @include media-4 {
+     margin-bottom: 16px;
+    }
   }
 
   &__title {
@@ -55,6 +83,15 @@
 
     &--width {
       max-width: 346px;
+
+      @include media-4 {
+       max-width: 260px;
+      }
+    }
+
+    @include media-3 {
+     font-size: 24px;
+     margin-bottom: 71px;
     }
   }
 
@@ -80,5 +117,9 @@
         background-color: $white;
       }
     }
+  }
+
+  @include media-3 {
+   padding-bottom: 48px;
   }
 }

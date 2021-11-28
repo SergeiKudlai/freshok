@@ -1,17 +1,100 @@
 .slider {
   position: relative;
 
+  &__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 60px;
+    height: 60px;
+    outline: transparent;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 6px;
+    transition: background-color  0.3s ease-in-out;
+
+    &--right,
+    &--left {
+      position: absolute;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: calc(50% - 16px);
+        left: calc(50% - 9px);
+        width: 18px;
+        height: 32px;
+        background-color: $dark-500;
+        transition: background-color  0.3s ease-in-out;
+      }
+    }
+
+    &--right {
+      right: 60px;
+
+      &::after {
+        mask: url("../images/sprite.svg#next-arrow") no-repeat center/ cover;  
+      }
+    }
+
+    &--left {
+      left: 60px;
+
+      &::after {
+        mask: url("../images/sprite.svg#prev-arrow") no-repeat center/ cover;
+      }
+    }
+
+    &:focus {
+      box-shadow: 0px 0px 0px 3px rgba(99, 166, 14, 0.5);
+      border-radius: 6px;
+    }
+
+    &:hover {
+      background-color: $active;
+
+      &::after {
+        background-color: $green;
+      }
+    }
+
+    &:active {
+      background-color: #F3F3F2;
+
+      &::after {
+        background-color: $green;
+      }
+    }
+
+    @include media-1 {
+     display: none;
+    }
+  }
+
   &__inner {
-    padding-top: 142px;
-    padding-bottom: 142px;
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
+    padding: 140px 0;
+
+    @include media-2 {
+     padding: 100px 0;
+    }
+
+    @include media-3 {
+      padding-top: 60px;
+      padding-bottom: 51px;
+      z-index: 100;
+     }
   }
 
   &__content {
     background-color: $slider-bg;
-    padding: 24px 24px;
+    padding: 27px 24px;
+
+    @include media-3 {
+     padding: 15px 0;
+    }
   }
 
   &__content-title {
@@ -22,6 +105,12 @@
     font-weight: 900;
     margin-bottom: 7px;
     font-family: "Ruda", sans-serif;
+
+    @include media-3 {
+     font-size: 20px;
+     font-weight: 700;
+     margin-bottom: 15px;
+    }
   }
 
   &__content-sale {
@@ -34,60 +123,45 @@
     font-size: 16px;
     font-weight: 400;
     margin-bottom: 32px;
+
+    @include media-3 {
+     margin-bottom: 24px;
+    }
+  }
+
+  &__content-link {
+    @include media-4 {
+     font-size: 14px;
+    }
   }
 }
 
-.arrow {
-  &__button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 3;
-    width: 60px;
-    height: 60px;
-    outline: transparent;
-    
-    &--right {
-      right: 60px;
-    }
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 14px;
+  left: calc(50% - 29px);
+  
+  
 
-    &--left {
-      left: 60px;
-    }
+  button {
+    font-size: 0;
+    border: none;
+    padding: 0;
+    width: 12px;
+    height: 12px;
+    background-color: $white;
+    border-radius: 50%;
+    border: 1px solid $silver-600;
+    margin-right: 10px;
+  }
+}
 
-    &:focus {
-      box-shadow: 0px 0px 0px 3px rgba(99, 166, 14, 0.5);
-      border-radius: 6px;
-    }
+.slick-active {
 
-    rect {
-      transition: fill 0.5s ease-in-out;
-    }
-
-    path {
-      transition: fill 0.5s ease-in-out;
-    }
-
-    &:hover {
-
-      rect {
-        fill:$active;
-      }
-
-      path {
-        fill: $green;
-      }
-    }
-
-    &:active {
-
-      path {
-        fill: $green;
-      }
-
-      rect {
-        fill: #F3F3F2;
-      }
-    }
+  button {
+    background-color: $green;
   }
 }

@@ -3,19 +3,49 @@
 
   &__title {
     margin-bottom: 30px;
+
+    @include media-3 {
+     margin-bottom: 24px;
+    }
   }
 
   &__button {
     margin-bottom: 48px;
-  }
 
+    @include media-3 {
+     margin-bottom: 24px;
+    }
+
+    @include media-4 {
+     margin-bottom: 6px;
+    }
+  }
   &__inner {
     margin-bottom: 48px;
+
+    @include media-2 {
+      grid-gap: 10px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include media-3 {
+     margin-bottom: 24px;
+     
+    }
+
+    @include media-4 {
+      grid-gap: 5px;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
   }
 
   &__btn {
     margin: 0 auto;
     display: block;
+  }
+
+  @include media-3 {
+   padding-bottom: 42px;
   }
 }
 

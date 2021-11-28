@@ -1,22 +1,4 @@
-
-@mixin padd ($padd...) {
-    padding: $padd;
-}
-
-@mixin mar ($mar...) {
-    margin: $mar;
-}
-
-@mixin font ($fz,$lh,$fw) {
-    font-size: $fz;
-    line-height: $lh;
-    font-weight: $fw;
-}
-
-@mixin wh ($w,$h) {
-    width: $w;
-    height: $h;
-}
+@import "variables";
 
 @mixin line-clamp ($font-size, $line-height, $lines-to-show) {
     display: block;
@@ -28,4 +10,28 @@
     text-overflow: ellipsis;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: $lines-to-show;
+}
+
+@mixin media-1 {
+    @media (max-width: $mds1 + 'px') {
+        @content;
+    }
+}
+
+@mixin media-2 {
+    @media (max-width: $mds2 + 'px') {
+        @content;
+    }
+}
+
+@mixin media-3 {
+    @media (max-width: $mds3 + 'px') {
+        @content;
+    }
+}
+
+@mixin media-4 {
+    @media (max-width: $mds4 + 'px') {
+        @content;
+    }
 }

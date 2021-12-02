@@ -1,6 +1,10 @@
 .goods {
   padding-bottom: 72px;
 
+  @include media-3 {
+   padding-bottom: 48px;
+  }
+
   &__title {
     margin-bottom: 30px;
 
@@ -43,9 +47,68 @@
     margin: 0 auto;
     display: block;
   }
-
-  @include media-3 {
-   padding-bottom: 42px;
-  }
 }
 
+.counter {
+  display: flex;
+  align-items: flex-end;
+  margin-left: auto;
+  margin-right: 24px;
+
+  @include media-3 {
+   order: -1;
+   width: 100%;
+   justify-content: center;
+   margin-bottom: 14px;
+   margin-right: 0;
+  }
+
+  &__click {
+    background-color: $green;
+    width: 24px;
+    height: 24px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: calc(50% - 8px);
+      left: calc(50% - 8px);
+      width: 16px;
+      height: 16px;
+    }
+
+    &--minus {
+      border-radius: 3px 0 0 3px;
+
+      &::before {
+        mask: url("../images/sprite.svg#minus") no-repeat center/ cover;
+        background-color: $white;
+      }
+    }
+
+    &--plus {
+      border-radius: 0 3px 3px 0;
+
+      &::before {
+        mask: url("../images/sprite.svg#plus") no-repeat center/ cover;
+        background-color: #ffffff;
+      }
+    }
+  }
+
+  &__minus {
+    border-radius: 3px 0 0 3px;
+  }
+
+  &__plus {
+    border-radius: 0px 3px 3px 0;
+  }
+
+  &__text {
+    max-width: 36px;
+    background-color: rgba(99, 166, 14, 0.1);
+    height: 24px;
+    text-align: center;
+  }
+}

@@ -1,12 +1,16 @@
 .brands {
   padding-bottom: 72px;
   padding-top: 72px;
+
+  
+  @include media-3 {
+    padding: 45px 0;
+   }
   
   &__list {
     display: flex;
     align-items: center;
     justify-content: space-around;
-
   }
 
   &__img {
@@ -15,13 +19,13 @@
     max-width: 80px;
     max-height: 60px;
 
+    @include media-3 {
+     margin: auto;
+    }
+
     &:hover {
       opacity: 1;
     }
-  }
-
-  @include media-3 {
-   padding: 48px 0;
   }
 }
 

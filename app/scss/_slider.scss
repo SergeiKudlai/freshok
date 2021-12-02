@@ -11,7 +11,7 @@
     outline: transparent;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 6px;
-    transition: background-color  0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
 
     &--right,
     &--left {
@@ -25,7 +25,7 @@
         width: 18px;
         height: 32px;
         background-color: $dark-500;
-        transition: background-color  0.3s ease-in-out;
+        transition: background-color 0.3s ease-in-out;
       }
     }
 
@@ -33,7 +33,7 @@
       right: 60px;
 
       &::after {
-        mask: url("../images/sprite.svg#next-arrow") no-repeat center/ cover;  
+        mask: url("../images/sprite.svg#next-arrow") no-repeat center/ cover;
       }
     }
 
@@ -59,7 +59,7 @@
     }
 
     &:active {
-      background-color: #F3F3F2;
+      background-color: #f3f3f2;
 
       &::after {
         background-color: $green;
@@ -67,7 +67,7 @@
     }
 
     @include media-1 {
-     display: none;
+      display: none;
     }
   }
 
@@ -78,14 +78,13 @@
     padding: 140px 0;
 
     @include media-2 {
-     padding: 100px 0;
+      padding: 100px 0;
     }
 
     @include media-3 {
       padding-top: 60px;
       padding-bottom: 51px;
-      z-index: 100;
-     }
+    }
   }
 
   &__content {
@@ -93,7 +92,9 @@
     padding: 27px 24px;
 
     @include media-3 {
-     padding: 15px 0;
+      padding: 15px 15px;
+      margin-right: -15px;
+      margin-left: -15px;
     }
   }
 
@@ -105,11 +106,13 @@
     font-weight: 900;
     margin-bottom: 7px;
     font-family: "Ruda", sans-serif;
+    max-width: 761px;
 
     @include media-3 {
-     font-size: 20px;
-     font-weight: 700;
-     margin-bottom: 15px;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      max-width: 250px;
     }
   }
 
@@ -123,15 +126,20 @@
     font-size: 16px;
     font-weight: 400;
     margin-bottom: 32px;
+    max-width: 761px;
 
     @include media-3 {
-     margin-bottom: 24px;
+      margin-bottom: 24px;
+    }
+
+    &--off {
+      display: none;
     }
   }
 
   &__content-link {
     @include media-4 {
-     font-size: 14px;
+      font-size: 14px;
     }
   }
 }
@@ -143,8 +151,6 @@
   position: absolute;
   bottom: 14px;
   left: calc(50% - 29px);
-  
-  
 
   button {
     font-size: 0;
@@ -160,7 +166,6 @@
 }
 
 .slick-active {
-
   button {
     background-color: $green;
   }

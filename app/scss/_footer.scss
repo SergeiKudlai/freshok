@@ -34,6 +34,7 @@
 
     @include media-4 {
      padding-bottom: 23px;
+     padding-top: 24px;
     }
   }
 
@@ -67,6 +68,15 @@
     width: 100%;
     margin-right: 50px;
 
+    @include media-1 {
+      margin: 0 auto;
+    }
+    
+    @include media-4 {
+     padding-top: 28px;
+     text-align: left;
+    }
+
     &::after {
       display: none;
     }
@@ -76,10 +86,18 @@
       display: inline-block;
       line-height: 1;
       font-weight: 400;
+
+      @include media-4 {
+       margin-bottom: 15px;
+      }
     }
 
     &__inner {
       position: relative;
+
+      @include media-4 {
+       max-width: 300px;
+      }
     }
 
     &__input {
@@ -108,20 +126,56 @@
       letter-spacing: 0;
       background-color: $green;
       height: 100%;
-    }
 
-    @include media-1 {
-      margin: 0 auto;
-    }
-    
-    @include media-4 {
-     padding-top: 28px;
-     text-align: left;
+      @include media-3 {
+       border-radius: 0 6px 6px 0;
+      }
+
+      @include media-4 {
+        padding-top: 14px;
+        padding-bottom: 12px;
+        padding-left: 13px;
+        padding-right: 10px;
+      }
     }
   }
 
   &__list {
     margin: 0 auto;
+  }
+
+  .address {
+
+    &__list {
+
+      @include media-4 {
+       margin-bottom: 18px;
+      }
+    }
+
+    &__item {
+
+      @include media-3 {
+       &:not(:last-child){
+        margin-bottom: 19px;
+       }
+      }
+    }
+  }
+
+  .social {
+    margin-bottom: 28px;
+
+    @include media-4 {
+     margin-bottom: 19px;
+    }
+
+    &__link {
+
+      &--facebook {
+        width: 16px;
+      }
+    }
   }
 
   &__bottom {
@@ -134,31 +188,12 @@
     }
   }
 
-  .social {
-    margin-bottom: 28px;
-
-    @include media-4 {
-     margin-bottom: 19px;
-    }
-  }
+ 
 }
 
 .list {
   column-count: 3;
   column-gap: 75px;
-
-  &__item {
-    margin-bottom: 21px;
-    font-weight: 400;
-
-    @include media-4 {
-     margin-bottom: 19px;
-    }
-  }
-
-  &__link {
-    white-space: nowrap;
-  }
 
   @include media-1 {
     padding-top: 24px;
@@ -166,7 +201,22 @@
 
   @include media-4 {
     column-count: 2;
-    column-gap: 50px;
+    column-gap: 115px;
+    text-align: left;
+  }
+
+  &__item {
+    margin-bottom: 21px;
+    font-weight: 400;
+
+    @include media-4 {
+     margin-bottom: 19px;
+     max-width: 64px;
+    }
+  }
+
+  &__link {
+    white-space: nowrap;
   }
 }
 

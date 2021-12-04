@@ -2,7 +2,7 @@
   padding-bottom: 72px;
 
   @include media-3 {
-   padding-bottom: 48px;
+   padding-bottom: 51px;
   }
 
   &__title {
@@ -21,7 +21,7 @@
     }
 
     @include media-4 {
-     margin-bottom: 6px;
+     margin-bottom: 10px;
     }
   }
   &__inner {

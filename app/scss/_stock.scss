@@ -18,7 +18,7 @@
   }
 
   &__button {
-    margin-bottom: 48px;
+    margin-bottom: 46px;
     justify-content: center;
 
     .variety {
@@ -53,7 +53,7 @@
   }
 
   &__inner {
-    margin-bottom: 48px;
+    margin-bottom: 45px;
 
     @include media-1 {
       grid-template-columns: repeat(3, 1fr);

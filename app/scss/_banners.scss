@@ -22,8 +22,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
-    padding-top: 69px;
-    padding-bottom: 82px;
+    padding-top: 76px;
+    padding-bottom: 81px;
     padding-left: 32px;
     padding-right: 15px;
     text-transform: uppercase;
@@ -36,7 +36,7 @@
     @include media-2 {
       max-width: 100%;
       padding-top: 73px;
-      padding-bottom: 36px;
+      padding-bottom: 38px;
     }
     
     &:not(:last-child){
@@ -54,6 +54,7 @@
      }
 
      @include media-3 {
+       border-radius: 6px;
       
       &:not(:last-child){
        margin-right: 0;

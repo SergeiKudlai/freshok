@@ -343,180 +343,1116 @@
       <section class="catalog-products">
         <div class="container">
 
-          <h2 class="catalog-products__title title">
+          <h1 class="catalog-products__title title">
             Каталог товаров
-          </h2>
+          </h1>
 
           <div class="catalog-products__inner">
 
             <aside class="catalog-products__aside suggestions">
 
-              <div class="suggestions__item categories">
+              <form class="suggestions__item categories" action="#">
+
+                <h2 class="sr-only">категории</h2>
 
                 <button class="categories__button button" type="button">
                   Категории
                 </button>
 
-                <ul class="categories__list">
-                  <li class="categories__item">
-                    <a class="categories__link" href="#"></a>
-                  </li>
+                <div class="categories__list">
+                  <label class="categories__label font" for="fructs">Овощи и фрукты</label>
+                  <input class="categories__input" name="fructs" id="fructs" type="checkbox">
 
-                  <li class="categories__item">
-                    <a class="categories__link" href="#">Овощи и фрукты</a>
-                  </li>
+                  <label class="categories__label font" for="grocery">Бакалея</label>
+                  <input class="categories__input" name="grocery" id="grocery" type="checkbox">
 
-                  <li class="categories__item">
-                    <a class="categories__link" href="#">Бакалея</a>
-                  </li>
+                  <label class="categories__label font" for="milk-product">Молочные продукты</label>
+                  <input class="categories__input" name="milk-product" id="milk-product" type="checkbox">
 
-                  <li class="categories__item">
-                    <a class="categories__link" href="#">Молочные продукты</a>
-                  </li>
+                  <label class="categories__label font" for="bread">Хлеб</label>
+                  <input class="categories__input" name="bread" id="bread" type="checkbox">
 
-                  <li class="categories__item">
-                    <a class="categories__link" href="#">Хлеб</a>
-                  </li>
+                  <label class="categories__label font" for="meat">Мясо</label>
+                  <input class="categories__input" name="meat" id="meat" type="checkbox">
 
-                  <li class="categories__item">
-                    <a class="categories__link" href="#">Мясо</a>
-                  </li>
+                  <label class="categories__label font" for="sausage">Колбаса</label>
+                  <input class="categories__input" name="sausage" id="sausage" type="checkbox">
 
-                  <li class="categories__item">
-                    <a class="categories__link" href="#">Колбаса</a>
-                  </li>
+                  <label class="categories__label font" for="fisch">Рыба</label>
+                  <input class="categories__input" name="fisch" id="fisch" type="checkbox">
 
-                  <li class="categories__item">
-                    <a class="categories__link" href="#">Рыба</a>
-                  </li>
+                  <input class="categories__input" name="alcohol" id="alcohol" type="checkbox">
+                  <label class="categories__label font" for="alcohol">Алкоголь</label>
+                </div>
+              </form>
 
-                  <li class="categories__item">
-                    <a class="categories__link" href="#">Алкоголь</a>
-                  </li>
-                </ul>
+              <form class="suggestions__item offer">
 
-              </div>
-
-              <div class="suggestions__item offer">
+                <h2 class="sr-only">предложения</h2>
 
                 <button class="offer__button button" type="button">
                   Предложения
                 </button>
 
-                <ul class="offer__list">
-                  <li class="offer__item">
-                    <label class="offer__label" for="sale">
-                      <input class="offer__input" type="checkbox" id="sale" name="sale">
-                      Со скидкой
-                    </label>
-                  </li>
+                <div class="offer__list">
 
-                  <li class="offer__item">
-                    <label class="offer__label" for="novelty">
-                      <input class="offer__input" type="checkbox" id="novelty" name="novelty" checked>
-                      Новинка
-                    </label>
-                  </li>
+                  <label class="offer__label font" for="sale">
+                    <input class="offer__input" type="checkbox" name="sale" id="sale">
+                    <span class="offer__checkbox"></span>
+                    Со скидкой
+                  </label>
 
-                  <li class="offer__item">
-                    <label class="offer__label" for="hit">
-                      <input class="offer__input" type="checkbox" id="hit" name="hit">
-                      Хит
-                    </label>
-                  </li>
+                  <label class="offer__label font" for="novelty">
+                    <input class="offer__input" type="checkbox" name="novelty" id="novelty" checked>
+                    <span class="offer__checkbox"></span>
+                    Новинка
+                  </label>
 
-                </ul>
+                  <label class="offer__label font" for="hit">
+                    <input class="offer__input" type="checkbox" name="hit" id="hit">
+                    <span class="offer__checkbox"></span>
+                    Хит
+                  </label>
+                </div>
+              </form>
 
-              </div>
+              <form class="suggestions__item brand" action="#">
 
-              <div class="suggestions__item brand">
+                <h2 class="sr-only">бренды</h2>
 
                 <button class="brand__button button" type="button">
                   Бренд
                 </button>
 
-                <ul class="brand__list">
-                  <li class="brand__item">
-                    <label class="brand__label" for="CocaCola">
-                      <input class="brand__input" type="checkbox" name="CocaCola" id="CocaCola">
-                      CocaCola
-                    </label>
-                  </li>
+                <div class="brand__list">
 
-                  <li class="brand__item">
-                    <label class="brand__label" for="Pepsi">
-                      <input class="brand__input" type="checkbox" name="Pepsi" id="Pepsi">
-                      Pepsi
-                    </label>
-                  </li>
+                  <label class="brand__label font" for="CocaCola">
+                    <input class="brand__input" type="checkbox" name="CocaCola" id="CocaCola">
+                    <span class="brand__checkbox"></span>
+                    CocaCola
+                  </label>
 
-                  <li class="brand__item">
-                    <label class="brand__label" for="Sprite">
-                      <input class="brand__input" type="checkbox" name="Sprite" id="Sprite">
-                      Sprite
-                    </label>
-                  </li>
+                  <label class="brand__label font" for="Pepsi">
+                    <input class="brand__input" type="checkbox" name="Pepsi" id="Pepsi">
+                    <span class="brand__checkbox"></span>
+                    Pepsi
+                  </label>
 
-                  <li class="brand__item">
-                    <label class="brand__label" for="Fanta">
-                      <input class="brand__input" type="checkbox" name="Fanta" id="Fanta">
-                      Fanta
-                    </label>
-                  </li>
+                  <label class="brand__label font" for="Sprite">
+                    <input class="brand__input" type="checkbox" name="Sprite" id="Sprite">
+                    <span class="brand__checkbox"></span>
+                    Sprite
+                  </label>
 
-                  <li class="brand__item">
-                    <label class="brand__label" for="RedBull">
-                      <input class="brand__input" type="checkbox" name="RedBull" id="RedBull">
-                      RedBull
-                    </label>
-                  </li>
-                  
-                  <li class="brand__item">
-                    <label class="brand__label" for="dr_Pepper">
-                      <input class="brand__input" type="checkbox" name="dr_Pepper" id="dr_pepper">
-                      Dr Pepper
-                    </label>
-                  </li>
-                </ul>
+                  <label class="brand__label font" for="Fanta">
+                    <input class="brand__input" type="checkbox" name="Fanta" id="Fanta">
+                    <span class="brand__checkbox"></span>
+                    Fanta
+                  </label>
 
-              </div>
+                  <label class="brand__label font" for="RedBull">
+                    <input class="brand__input" type="checkbox" name="RedBull" id="RedBull">
+                    <span class="brand__checkbox"></span>
+                    RedBull
+                  </label>
 
-              <div class="suggestions__item price">
+                  <label class="brand__label font" for="DrPepper">
+                    <input class="brand__input" type="checkbox" name="DrPepper" id="DrPepper">
+                    <span class="brand__checkbox"></span>
+                    Dr Pepper
+                  </label>
 
-                <button class="price__button button">
-                  Цена
-                </button>
+                </div>
 
-                <ul class="price__list">
-                  <li class="price__item">
-                    <label class="price__label" for="">
+              </form>
+
+              <form class="suggestions__item price" action="#">
+
+                <h2 class="price__title">Цена</h2>
+
+                <div class="price__list">
+
+                  <span class="sr-only">фильтр цены</span>
+
+                  <label class="price__label">
+                    <span class="price__text">
                       от
-                      <input class="price__input" type="text">
+                      <span class="price__number price__number--from"></span>
                       ₽
-                    </label>
-                  </li>
+                    </span>
 
-                  <li class="price__item">
-                    <label class="price__label" for="">
-                      от
-                      <input class="price__input" type="text">
+                    <span class="price__text">
+                      до
+                      <span class="price__number price__number--to"></span>
                       ₽
-                    </label>
-                  </li>
-                </ul>
+                    </span>
+                  </label>
 
-              </div>
+                  <label class="sr-only" for="scale">фильтр цены</label>
+                  <input class="price__input" type="text" id="scale" name="scale" data-min="0" data-max="1000"
+                    data-from="100" data-to="800">
+
+                </div>
+
+              </form>
             </aside>
 
-
             <div class="catalog-products__card">
+
+              <div class="catalog-products__card filter">
+
+                <div class="filter__selects">
+
+                  <label class="sr-only" for="name">фильтр по названию</label>
+                  <select class="filter__select" name="name" id="name">
+                    <option class="filter__option" value="">По названию</option>
+                    <option class="filter__option" value="">По популярности</option>
+                    <option class="filter__option" value="">Сначала дешевые</option>
+                    <option class="filter__option" value="">Сначала дорогие</option>
+                    <option class="filter__option" value="">По алфавиту</option>
+                  </select>
+
+                  <label class="sr-only" for="name">фильтр по названию</label>
+                  <select class="filter__select" name="name" id="name">
+                    <option class="filter__option" value="">по 12</option>
+                    <option class="filter__option" value="">по 18</option>
+                    <option class="filter__option" value="">по 24</option>
+                    <option class="filter__option" value="">по 30</option>
+                    <option class="filter__option" value="">по 36</option>
+                  </select>
+
+                </div>
+                
+                <button class="filter__button filter__button--menu">
+                  <span class="sr-only">фильтр меню каталога</span>
+                </button>
+
+                <button class="filter__button filter__button--icon filter__button--icon--active">
+                  <span class="sr-only">фильтр меню каталога</span>
+                </button>
+              </div>
+
+              <ul class="catalog-products__card products">
+
+                <li class="products__box mix category-b">
+    
+                  <article class="products__items products-card">
+    
+                    <ul class="products-card__badges badges">
+                      <li class="badges__item badges__item--new badges__item--on">
+                        новинка
+                      </li>
+    
+                      <li class="badges__item badges__item--sale badges__item--on">
+                        -50%
+                      </li>
+    
+                      <li class="badges__item badges__item--hit">
+                        хит
+                      </li>
+                    </ul>
+    
+                    <button class="products-card__button" type="button">
+                      <span class="sr-only">Понравившейся товар</span>
+                    </button>
+    
+                    <div class="products-card__image-box">
+    
+                      <a class="products-card__image" href="#">
+                        <img class="products-card__img" src="images/goods/pineapple.jpg" alt="Ананас" width="300"
+                          height="234">
+                      </a>
+    
+                      <button class="products-card__increase" type="button">
+                        <span class="sr-only">увеличить изоброжение</span>
+                      </button>
+                    </div>
+    
+                    <div class="products-card__info">
+    
+                      <h3 class="products-card__name">
+                        <a class="products-card__link" href="#" target="_blank">
+                          Ананас, 1кг
+                        </a>
+                      </h3>
+    
+                      <div class="products-card__box">
+    
+                        <ul class="products-card__prices prices">
+                          <li class="prices__item prices__item--old">
+                            1999
+                          </li>
+    
+                          <li class="prices__item ">
+                            999
+                          </li>
+                        </ul>
+    
+                        <div class="counter" data-step="1" data-min="1" data-max="100">
+                          <button class="counter__click counter__click--minus" type="button">
+                            <span class="sr-only">уменьшить количество товара</span>
+                          </button>
+    
+                          <label class="sr-only" for="count">счетчик товаров</label>
+                          <input class="counter__text" type="text" name="count" value="1" id="count">
+    
+                          <button class="counter__click counter__click--plus" type="button">
+                            <span class="sr-only">увеличить количество товара</span>
+                          </button>
+                        </div>
+    
+                        <button class="products-card__basket" type="button">
+                          <span class="sr-only">в корзину</span>
+                        </button>
+    
+                      </div>
+    
+                    </div>
+    
+                  </article>
+    
+                </li>
+    
+                <li class="products__box mix category-b">
+    
+                  <article class="products__items products-card">
+    
+                    <ul class="products-card__badges badges">
+                      <li class="badges__item badges__item--new">
+                        новинка
+                      </li>
+    
+                      <li class="badges__item badges__item--sale">
+                        -50%
+                      </li>
+    
+                      <li class="badges__item badges__item--hit">
+                        хит
+                      </li>
+                    </ul>
+    
+                    <button class="products-card__button" type="button">
+                      <span class="sr-only">Понравившейся товар</span>
+                    </button>
+    
+                    <div class="products-card__image-box">
+    
+                      <a class="products-card__image" href="#">
+                        <img class="products-card__img" src="images/goods/lemon.jpg" alt="Лемон" width="300" height="234">
+                      </a>
+    
+                      <button class="products-card__increase" type="button">
+                        <span class="sr-only">увеличить изоброжение</span>
+                      </button>
+                    </div>
+    
+                    <div class="products-card__info">
+    
+                      <h3 class="products-card__name">
+                        <a class="products-card__link" href="#" target="_blank">
+                          Лимон, 1кг
+                        </a>
+                      </h3>
+    
+                      <div class="products-card__box">
+    
+                        <ul class="products-card__prices prices">
+                          <li class="prices__item prices__item--old">
+    
+                          </li>
+    
+                          <li class="prices__item ">
+                            199
+                          </li>
+                        </ul>
+    
+                        <div class="counter" data-step="1" data-min="1" data-max="100">
+                          <button class="counter__click counter__click--minus" type="button">
+                            <span class="sr-only">уменьшить количество товара</span>
+                          </button>
+    
+                          <label class="sr-only" for="count">счетчик товаров</label>
+                          <input class="counter__text" type="text" name="count" value="1" id="count">
+    
+                          <button class="counter__click counter__click--plus" type="button">
+                            <span class="sr-only">увеличить количество товара</span>
+                          </button>
+                        </div>
+    
+                        <button class="products-card__basket" type="button">
+                          <span class="sr-only">в корзину</span>
+                        </button>
+    
+                      </div>
+    
+                    </div>
+    
+                  </article>
+    
+                </li>
+    
+                <li class="products__box mix category-b">
+    
+                  <article class="products__items products-card">
+    
+                    <ul class="products-card__badges badges">
+                      <li class="badges__item badges__item--new">
+                        новинка
+                      </li>
+    
+                      <li class="badges__item badges__item--sale">
+                        -50%
+                      </li>
+    
+                      <li class="badges__item badges__item--hit badges__item--on">
+                        хит
+                      </li>
+                    </ul>
+    
+                    <button class="products-card__button" type="button">
+                      <span class="sr-only">Понравившейся товар</span>
+                    </button>
+    
+                    <div class="products-card__image-box">
+    
+                      <a class="products-card__image" href="#">
+                        <img class="products-card__img" src="images/goods/dragon_fruit.jpg" alt="Питахайя" width="300"
+                          height="234">
+                      </a>
+    
+                      <button class="products-card__increase" type="button">
+                        <span class="sr-only">увеличить изоброжение</span>
+                      </button>
+                    </div>
+    
+                    <div class="products-card__info">
+    
+                      <h3 class="products-card__name">
+                        <a class="products-card__link" href="#" target="_blank">
+                          Питахайя красная с белой мякотью, 1шт
+                        </a>
+                      </h3>
+    
+                      <div class="products-card__box">
+    
+                        <ul class="products-card__prices prices">
+                          <li class="prices__item prices__item--old">
+    
+                          </li>
+    
+                          <li class="prices__item ">
+                            1019
+                          </li>
+                        </ul>
+    
+                        <div class="counter" data-step="1" data-min="1" data-max="100">
+                          <button class="counter__click counter__click--minus" type="button">
+                            <span class="sr-only">уменьшить количество товара</span>
+                          </button>
+    
+                          <label class="sr-only" for="count">счетчик товаров</label>
+                          <input class="counter__text" type="text" name="count" value="1" id="count">
+    
+                          <button class="counter__click counter__click--plus" type="button">
+                            <span class="sr-only">увеличить количество товара</span>
+                          </button>
+                        </div>
+                        <button class="products-card__basket" type="button">
+                          <span class="sr-only">в корзину</span>
+                        </button>
+    
+                      </div>
+    
+                    </div>
+    
+                  </article>
+    
+                </li>
+    
+                <li class="products__box mix category-c">
+    
+                  <article class="products__items products-card">
+    
+                    <ul class="products-card__badges badges">
+                      <li class="badges__item badges__item--new">
+                        новинка
+                      </li>
+    
+                      <li class="badges__item badges__item--sale">
+                        -50%
+                      </li>
+    
+                      <li class="badges__item badges__item--hit">
+                        хит
+                      </li>
+                    </ul>
+    
+                    <button class="products-card__button" type="button">
+                      <span class="sr-only">Понравившейся товар</span>
+                    </button>
+    
+                    <div class="products-card__image-box">
+    
+                      <a class="products-card__image" href="#">
+                        <img class="products-card__img" src="images/goods/ketchup.jpg" alt="Кетчуп" width="300"
+                          height="225">
+                      </a>
+    
+                      <button class="products-card__increase" type="button">
+                        <span class="sr-only">увеличить изоброжение</span>
+                      </button>
+                    </div>
+    
+                    <div class="products-card__info">
+    
+                      <h3 class="products-card__name">
+                        <a class="products-card__link" href="#" target="_blank">Кетчуп томатный детский органический
+                          Bio-Zentrale 500мл, 1 шт</a>
+                      </h3>
+    
+                      <div class="products-card__box">
+    
+                        <ul class="products-card__prices prices">
+                          <li class="prices__item prices__item--old">
+    
+                          </li>
+    
+                          <li class="prices__item ">
+                            600
+                          </li>
+                        </ul>
+    
+                        <div class="counter" data-step="1" data-min="1" data-max="100">
+                          <button class="counter__click counter__click--minus" type="button">
+                            <span class="sr-only">уменьшить количество товара</span>
+                          </button>
+    
+                          <label class="sr-only" for="count">счетчик товаров</label>
+                          <input class="counter__text" type="text" name="count" value="1" id="count">
+    
+                          <button class="counter__click counter__click--plus" type="button">
+                            <span class="sr-only">увеличить количество товара</span>
+                          </button>
+                        </div>
+                        <button class="products-card__basket" type="button">
+                          <span class="sr-only">в корзину</span>
+                        </button>
+    
+                      </div>
+    
+                    </div>
+    
+                  </article>
+    
+                </li>
+    
+                <li class="products__box mix category-c">
+    
+                  <article class="products__items products-card">
+    
+                    <ul class="products-card__badges badges">
+                      <li class="badges__item badges__item--new">
+                        новинка
+                      </li>
+    
+                      <li class="badges__item badges__item--sale">
+                        -50%
+                      </li>
+    
+                      <li class="badges__item badges__item--hit badges__item--on">
+                        хит
+                      </li>
+                    </ul>
+    
+                    <button class="products-card__button" type="button">
+                      <span class="sr-only">Понравившейся товар</span>
+                    </button>
+    
+                    <div class="products-card__image-box">
+    
+                      <a class="products-card__image" href="#">
+                        <img class="products-card__img" src="images/goods/carrot.jpg" alt="морковь" width="300"
+                          height="225">
+                      </a>
+    
+                      <button class="products-card__increase" type="button">
+                        <span class="sr-only">увеличить изоброжение</span>
+                      </button>
+                    </div>
+    
+                    <div class="products-card__info">
+    
+                      <h3 class="products-card__name">
+                        <a class="products-card__link" href="#" target="_blank">
+                          Морковь молодая с бабушкиной грядки, 1кг
+                        </a>
+                      </h3>
+    
+                      <div class="products-card__box">
+    
+                        <ul class="products-card__prices prices">
+                          <li class="prices__item prices__item--old">
+    
+                          </li>
+    
+                          <li class="prices__item ">
+                            49
+                          </li>
+                        </ul>
+    
+                        <div class="counter" data-step="1" data-min="1" data-max="100">
+                          <button class="counter__click counter__click--minus" type="button">
+                            <span class="sr-only">уменьшить количество товара</span>
+                          </button>
+    
+                          <label class="sr-only" for="count">счетчик товаров</label>
+                          <input class="counter__text" type="text" name="count" value="1" id="count">
+    
+                          <button class="counter__click counter__click--plus" type="button">
+                            <span class="sr-only">увеличить количество товара</span>
+                          </button>
+                        </div>
+    
+                        <button class="products-card__basket" type="button">
+                          <span class="sr-only">в корзину</span>
+                        </button>
+    
+                      </div>
+    
+                    </div>
+    
+                  </article>
+    
+                </li>
+    
+                <li class="products__box mix category-c">
+    
+                  <article class="products__items products-card">
+    
+                    <ul class="products-card__badges badges">
+                      <li class="badges__item badges__item--new">
+                        новинка
+                      </li>
+    
+                      <li class="badges__item badges__item--sale badges__item--on">
+                        -50%
+                      </li>
+    
+                      <li class="badges__item badges__item--hit">
+                        хит
+                      </li>
+                    </ul>
+    
+                    <button class="products-card__button" type="button">
+                      <span class="sr-only">Понравившейся товар</span>
+                    </button>
+    
+                    <div class="products-card__image-box">
+    
+                      <a class="products-card__image" href="#">
+                        <img class="products-card__img" src="images/goods/juice.jpg" alt="напиток сокосодержащий"
+                          width="300" height="225">
+                      </a>
+    
+                      <button class="products-card__increase" type="button">
+                        <span class="sr-only">увеличить изоброжение</span>
+                      </button>
+                    </div>
+    
+                    <div class="products-card__info">
+    
+                      <h3 class="products-card__name">
+                        <a class="products-card__link" href="#" target="_blank">
+                          Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольн...
+                        </a>
+                      </h3>
+    
+                      <div class="products-card__box">
+    
+                        <ul class="products-card__prices prices">
+                          <li class="prices__item prices__item--old">
+                            299
+                          </li>
+    
+                          <li class="prices__item ">
+                            199
+                          </li>
+                        </ul>
+    
+                        <div class="counter" data-step="1" data-min="1" data-max="100">
+                          <button class="counter__click counter__click--minus" type="button">
+                            <span class="sr-only">уменьшить количество товара</span>
+                          </button>
+    
+                          <label class="sr-only" for="count">счетчик товаров</label>
+                          <input class="counter__text" type="text" name="count" value="1" id="count">
+    
+                          <button class="counter__click counter__click--plus" type="button">
+                            <span class="sr-only">увеличить количество товара</span>
+                          </button>
+                        </div>
+    
+                        <button class="products-card__basket" type="button">
+                          <span class="sr-only">в корзину</span>
+                        </button>
+    
+                      </div>
+    
+                    </div>
+    
+                  </article>
+    
+                </li>
+    
+                <li class="products__box mix category-d">
+    
+                  <article class="products__items products-card">
+    
+                    <ul class="products-card__badges badges">
+                      <li class="badges__item badges__item--new badges__item--on">
+                        новинка
+                      </li>
+    
+                      <li class="badges__item badges__item--sale">
+                        -50%
+                      </li>
+    
+                      <li class="badges__item badges__item--hit">
+                        хит
+                      </li>
+                    </ul>
+    
+                    <button class="products-card__button" type="button">
+                      <span class="sr-only">Понравившейся товар</span>
+                    </button>
+    
+                    <div class="products-card__image-box">
+    
+                      <a class="products-card__image" href="#">
+                        <img class="products-card__img" src="images/goods/coffee.jpg" alt="кофе" width="300" height="225">
+                      </a>
+    
+                      <button class="products-card__increase" type="button">
+                        <span class="sr-only">увеличить изоброжение</span>
+                      </button>
+                    </div>
+    
+                    <div class="products-card__info">
+    
+                      <h3 class="products-card__name">
+                        <a class="products-card__link" href="#" target="_blank">
+                          Кофе с коноплей органический Caffé Salomoni 250г
+                        </a>
+                      </h3>
+    
+                      <div class="products-card__box">
+    
+                        <ul class="products-card__prices prices">
+                          <li class="prices__item prices__item--old">
+    
+                          </li>
+    
+                          <li class="prices__item ">
+                            877
+                          </li>
+                        </ul>
+    
+                        <div class="counter" data-step="1" data-min="1" data-max="100">
+                          <button class="counter__click counter__click--minus" type="button">
+                            <span class="sr-only">уменьшить количество товара</span>
+                          </button>
+    
+                          <label class="sr-only" for="count">счетчик товаров</label>
+                          <input class="counter__text" type="text" name="count" value="1" id="count">
+    
+                          <button class="counter__click counter__click--plus" type="button">
+                            <span class="sr-only">увеличить количество товара</span>
+                          </button>
+                        </div>
+    
+                        <button class="products-card__basket" type="button">
+                          <span class="sr-only">в корзину</span>
+                        </button>
+    
+                      </div>
+    
+                    </div>
+    
+                  </article>
+    
+                </li>
+    
+                <li class="products__box mix category-a">
+    
+                  <article class="products__items products-card">
+    
+                    <ul class="products-card__badges badges">
+                      <li class="badges__item badges__item--new badges__item--on ">новинка
+                      </li>
+    
+                      <li class="badges__item badges__item--sale">-50%</li>
+    
+                      <li class="badges__item badges__item--hit">хит</li>
+                    </ul>
+    
+                    <button class="products-card__button" type="button">
+                      <span class="sr-only">Понравившейся товар</span>
+                    </button>
+    
+                    <div class="products-card__image-box">
+    
+                      <a class="products-card__image" href="#">
+                        <img class="products-card__img" src="images/goods/paprik.jpg" alt="Перец" width="300" height="225">
+                      </a>
+    
+                      <button class="products-card__increase">
+                        <span class="sr-only">увеличить изоброжение</span>
+                      </button>
+                    </div>
+    
+                    <div class="products-card__info">
+    
+                      <h3 class="products-card__name">
+                        <a class="products-card__link" href="#" target="_blank">
+                          Перец оранжевый, 1кг
+                        </a>
+                      </h3>
+    
+                      <div class="products-card__box">
+    
+                        <ul class="products-card__prices prices">
+                          <li class="prices__item prices__item--old">
+                            
+                          </li>
+    
+                          <li class="prices__item">
+                            349
+                          </li>
+                        </ul>
+    
+                        <div class="counter" data-step="1" data-min="1" data-max="100">
+                          <button class="counter__click counter__click--minus" type="button">
+                            <span class="sr-only">уменьшить количество товара</span>
+                          </button>
+    
+                          <label class="sr-only" for="count">счетчик товаров</label>
+                          <input class="counter__text" type="text" name="count" value="1" id="count">
+    
+                          <button class="counter__click counter__click--plus" type="button">
+                            <span class="sr-only">увеличить количество товара</span>
+                          </button>
+                        </div>
+    
+                        <button class="products-card__basket" type="button">
+                          <span class="sr-only">в корзину</span>
+                        </button>
+    
+                      </div>
+    
+                    </div>
+    
+                  </article>
+    
+                </li>
+
+                <li class="products__box mix category-a">
+    
+                  <article class="products__items products-card">
+    
+                    <ul class="products-card__badges badges">
+                      <li class="badges__item badges__item--new badges__item--on ">новинка
+                      </li>
+    
+                      <li class="badges__item badges__item--sale">-50%</li>
+    
+                      <li class="badges__item badges__item--hit">хит</li>
+                    </ul>
+    
+                    <button class="products-card__button" type="button">
+                      <span class="sr-only">Понравившейся товар</span>
+                    </button>
+    
+                    <div class="products-card__image-box">
+    
+                      <a class="products-card__image" href="#">
+                        <img class="products-card__img" src="images/goods/paprik.jpg" alt="Перец" width="300" height="225">
+                      </a>
+    
+                      <button class="products-card__increase">
+                        <span class="sr-only">увеличить изоброжение</span>
+                      </button>
+                    </div>
+    
+                    <div class="products-card__info">
+    
+                      <h3 class="products-card__name">
+                        <a class="products-card__link" href="#" target="_blank">
+                          Перец оранжевый, 1кг
+                        </a>
+                      </h3>
+    
+                      <div class="products-card__box">
+    
+                        <ul class="products-card__prices prices">
+                          <li class="prices__item prices__item--old">
+                            
+                          </li>
+    
+                          <li class="prices__item">
+                            349
+                          </li>
+                        </ul>
+    
+                        <div class="counter" data-step="1" data-min="1" data-max="100">
+                          <button class="counter__click counter__click--minus" type="button">
+                            <span class="sr-only">уменьшить количество товара</span>
+                          </button>
+    
+                          <label class="sr-only" for="count">счетчик товаров</label>
+                          <input class="counter__text" type="text" name="count" value="1" id="count">
+    
+                          <button class="counter__click counter__click--plus" type="button">
+                            <span class="sr-only">увеличить количество товара</span>
+                          </button>
+                        </div>
+    
+                        <button class="products-card__basket" type="button">
+                          <span class="sr-only">в корзину</span>
+                        </button>
+    
+                      </div>
+    
+                    </div>
+    
+                  </article>
+    
+                </li>
+
+                <li class="products__box mix category-a">
+    
+                  <article class="products__items products-card">
+    
+                    <ul class="products-card__badges badges">
+                      <li class="badges__item badges__item--new badges__item--on ">новинка
+                      </li>
+    
+                      <li class="badges__item badges__item--sale">-50%</li>
+    
+                      <li class="badges__item badges__item--hit">хит</li>
+                    </ul>
+    
+                    <button class="products-card__button" type="button">
+                      <span class="sr-only">Понравившейся товар</span>
+                    </button>
+    
+                    <div class="products-card__image-box">
+    
+                      <a class="products-card__image" href="#">
+                        <img class="products-card__img" src="images/goods/paprik.jpg" alt="Перец" width="300" height="225">
+                      </a>
+    
+                      <button class="products-card__increase">
+                        <span class="sr-only">увеличить изоброжение</span>
+                      </button>
+                    </div>
+    
+                    <div class="products-card__info">
+    
+                      <h3 class="products-card__name">
+                        <a class="products-card__link" href="#" target="_blank">
+                          Перец оранжевый, 1кг
+                        </a>
+                      </h3>
+    
+                      <div class="products-card__box">
+    
+                        <ul class="products-card__prices prices">
+                          <li class="prices__item prices__item--old">
+                            
+                          </li>
+    
+                          <li class="prices__item">
+                            349
+                          </li>
+                        </ul>
+    
+                        <div class="counter" data-step="1" data-min="1" data-max="100">
+                          <button class="counter__click counter__click--minus" type="button">
+                            <span class="sr-only">уменьшить количество товара</span>
+                          </button>
+    
+                          <label class="sr-only" for="count">счетчик товаров</label>
+                          <input class="counter__text" type="text" name="count" value="1" id="count">
+    
+                          <button class="counter__click counter__click--plus" type="button">
+                            <span class="sr-only">увеличить количество товара</span>
+                          </button>
+                        </div>
+    
+                        <button class="products-card__basket" type="button">
+                          <span class="sr-only">в корзину</span>
+                        </button>
+    
+                      </div>
+    
+                    </div>
+    
+                  </article>
+    
+                </li>
+
+                <li class="products__box mix category-a">
+    
+                  <article class="products__items products-card">
+    
+                    <ul class="products-card__badges badges">
+                      <li class="badges__item badges__item--new badges__item--on ">новинка
+                      </li>
+    
+                      <li class="badges__item badges__item--sale">-50%</li>
+    
+                      <li class="badges__item badges__item--hit">хит</li>
+                    </ul>
+    
+                    <button class="products-card__button" type="button">
+                      <span class="sr-only">Понравившейся товар</span>
+                    </button>
+    
+                    <div class="products-card__image-box">
+    
+                      <a class="products-card__image" href="#">
+                        <img class="products-card__img" src="images/goods/paprik.jpg" alt="Перец" width="300" height="225">
+                      </a>
+    
+                      <button class="products-card__increase">
+                        <span class="sr-only">увеличить изоброжение</span>
+                      </button>
+                    </div>
+    
+                    <div class="products-card__info">
+    
+                      <h3 class="products-card__name">
+                        <a class="products-card__link" href="#" target="_blank">
+                          Перец оранжевый, 1кг
+                        </a>
+                      </h3>
+    
+                      <div class="products-card__box">
+    
+                        <ul class="products-card__prices prices">
+                          <li class="prices__item prices__item--old">
+                            
+                          </li>
+    
+                          <li class="prices__item">
+                            349
+                          </li>
+                        </ul>
+    
+                        <div class="counter" data-step="1" data-min="1" data-max="100">
+                          <button class="counter__click counter__click--minus" type="button">
+                            <span class="sr-only">уменьшить количество товара</span>
+                          </button>
+    
+                          <label class="sr-only" for="count">счетчик товаров</label>
+                          <input class="counter__text" type="text" name="count" value="1" id="count">
+    
+                          <button class="counter__click counter__click--plus" type="button">
+                            <span class="sr-only">увеличить количество товара</span>
+                          </button>
+                        </div>
+    
+                        <button class="products-card__basket" type="button">
+                          <span class="sr-only">в корзину</span>
+                        </button>
+    
+                      </div>
+    
+                    </div>
+    
+                  </article>
+    
+                </li>
+
+                <li class="products__box mix category-a">
+    
+                  <article class="products__items products-card">
+    
+                    <ul class="products-card__badges badges">
+                      <li class="badges__item badges__item--new badges__item--on ">новинка
+                      </li>
+    
+                      <li class="badges__item badges__item--sale">-50%</li>
+    
+                      <li class="badges__item badges__item--hit">хит</li>
+                    </ul>
+    
+                    <button class="products-card__button" type="button">
+                      <span class="sr-only">Понравившейся товар</span>
+                    </button>
+    
+                    <div class="products-card__image-box">
+    
+                      <a class="products-card__image" href="#">
+                        <img class="products-card__img" src="images/goods/paprik.jpg" alt="Перец" width="300" height="225">
+                      </a>
+    
+                      <button class="products-card__increase">
+                        <span class="sr-only">увеличить изоброжение</span>
+                      </button>
+                    </div>
+    
+                    <div class="products-card__info">
+    
+                      <h3 class="products-card__name">
+                        <a class="products-card__link" href="#" target="_blank">
+                          Перец оранжевый, 1кг
+                        </a>
+                      </h3>
+    
+                      <div class="products-card__box">
+    
+                        <ul class="products-card__prices prices">
+                          <li class="prices__item prices__item--old">
+                            
+                          </li>
+    
+                          <li class="prices__item">
+                            349
+                          </li>
+                        </ul>
+    
+                        <div class="counter" data-step="1" data-min="1" data-max="100">
+                          <button class="counter__click counter__click--minus" type="button">
+                            <span class="sr-only">уменьшить количество товара</span>
+                          </button>
+    
+                          <label class="sr-only" for="count">счетчик товаров</label>
+                          <input class="counter__text" type="text" name="count" value="1" id="count">
+    
+                          <button class="counter__click counter__click--plus" type="button">
+                            <span class="sr-only">увеличить количество товара</span>
+                          </button>
+                        </div>
+    
+                        <button class="products-card__basket" type="button">
+                          <span class="sr-only">в корзину</span>
+                        </button>
+    
+                      </div>
+    
+                    </div>
+    
+                  </article>
+    
+                </li>
+              </ul>
 
             </div>
           </div>
 
         </div>
       </section>
-
     </main>
 
     <footer class="footer">
@@ -673,4 +1609,3 @@
 </body>
 
 </html>
-

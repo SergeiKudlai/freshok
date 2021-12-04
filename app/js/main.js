@@ -1,6 +1,7 @@
 $(function () {
 
   $('.slider__box').slick({
+  
 
     prevArrow: $('.slider__button--left'),
 
@@ -16,19 +17,10 @@ $(function () {
       },
     ]
   });
+    
 
 
-  let goods = document.querySelector('[data-ref="goods"]');
-  let stock = document.querySelector('[data-ref="stock"]');
 
-  let config = {
-    controls: {
-      scope: 'Local'
-    }
-  };
-
-  let mixer = mixitup(goods, config);
-  let mixerTwo = mixitup(stock, config);
 
 
   $('.catalog__button').on('click', function () {
@@ -143,6 +135,45 @@ $(function () {
     }
     scrollPrev = scrolled;
   });
+
+  $('.categories__button').on('click', function () {
+    $('.categories__list').slideToggle();
+  });
+
+  $('.offer__button').on('click', function () {
+    $('.offer__list').slideToggle();
+  });
+
+
+  $('.brand__button').on('click', function () {
+    $('.brand__list').slideToggle();
+  });
+
+  $('.price__input').ionRangeSlider({
+    type: "double",
+    onStart: function (data) {
+      $('.price__number--from').text(data.from);
+      $('.price__number--to').text(data.to);
+    },
+    onChange: function (data) {
+      $('.price__number--from').text(data.from);
+      $('.price__number--to').text(data.to);
+    },
+  });
+
+
+  let goods = document.querySelector('[data-ref="goods"]');
+  let stock = document.querySelector('[data-ref="stock"]');
+
+  let config = {
+    controls: {
+      scope: 'Local'
+    }
+  };
+
+  let mixer = mixitup(goods, config);
+  let mixerTwo = mixitup(stock, config);
+
 });
 
 

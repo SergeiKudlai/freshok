@@ -30,3 +30,10 @@ $header-services_bg:#F6F6F6;
 $stock_bg:#F5F5F5;
 
 
+%checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+}

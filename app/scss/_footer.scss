@@ -8,31 +8,10 @@
 
   &__top {
     padding-top: 30px;
-    position: relative;
-
-    @include media-4 {
-      &::before,
-      &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        background-color: rgba(255, 255, 255, 0.1);
-      }
-
-      &::before {
-        top: 239px;
-      }
-
-      &::after {
-        top: 422px;
-      }
-    }
 
     @include media-4 {
       padding-bottom: 23px;
-      padding-top: 24px;
+      padding-top: 25px;
     }
   }
 
@@ -71,7 +50,7 @@
     }
 
     @include media-4 {
-      padding-top: 28px;
+      padding-top: 26px;
       text-align: left;
     }
 
@@ -139,6 +118,19 @@
   }
 
   .address {
+    position: relative;
+
+    @include media-4 {
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: -15px;
+        width: calc(100% + 30px);
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
     &__list {
       @include media-4 {
         margin-bottom: 18px;
@@ -162,7 +154,7 @@
     }
 
     @include media-4 {
-      margin-bottom: 19px;
+      margin-bottom: 22px;
     }
   }
 
@@ -181,6 +173,7 @@
   column-count: 3;
   column-gap: 75px;
   margin-right: 86px;
+  position: relative;
 
   @include media-1 {
     padding-top: 24px;
@@ -192,6 +185,16 @@
     column-gap: 115px;
     text-align: left;
     margin: 0 auto;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -7px;
+      left: -144px;
+      width: calc(100% + 288px);
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
   }
 
   &__item {

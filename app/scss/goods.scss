@@ -1,15 +1,15 @@
 .goods {
-  padding-bottom: 72px;
+  padding-bottom: 67px;
 
   @include media-3 {
-   padding-bottom: 51px;
+   padding-bottom: 48px;
   }
 
   &__title {
     margin-bottom: 30px;
 
     @include media-3 {
-     margin-bottom: 24px;
+     margin-bottom: 26px;
     }
   }
 
@@ -21,7 +21,7 @@
     }
 
     @include media-4 {
-     margin-bottom: 10px;
+     margin-bottom: 7px;
     }
   }
   &__inner {
@@ -59,7 +59,7 @@
    order: -1;
    width: 100%;
    justify-content: center;
-   margin-bottom: 14px;
+   margin-bottom: 15px;
    margin-right: 0;
   }
 

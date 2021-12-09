@@ -59,6 +59,7 @@ function scripts() {
 		'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
 		'node_modules/rateyo/src/jquery.rateyo.js',
 		'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
+		'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
 		'node_modules/mixitup/dist/mixitup.js',
 		'app/js/main.js'
 	])
@@ -72,6 +73,7 @@ function scripts() {
 
 function styles() {
 	return src([
+		'node_modules/jquery-form-styler/dist/jquery.formstyler.css',
 		'app/scss/style.scss'
 	])
 		.pipe(scss({ outputStyle: 'compressed' }))

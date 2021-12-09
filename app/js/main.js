@@ -1,7 +1,7 @@
 $(function () {
 
   $('.slider__box').slick({
-  
+
 
     prevArrow: $('.slider__button--left'),
 
@@ -17,11 +17,29 @@ $(function () {
       },
     ]
   });
-    
+
+ 
+
+  $('.filter__button').on('click' , function(){
+    $('.filter__button').removeClass('filter__button--icon--active');
+    $(this).addClass('filter__button--icon--active');
+  });
 
 
+  $('.filter__button--menu').on('click' , function(){
+    $('.products-card').addClass('products-card--list');
+    $('.catalog-products .products').addClass('products-card--list');
+    $('.prices').addClass('prices--list');
+  });
+
+  $('.filter__button--icon ').on('click' , function(){
+    $('.products-card').removeClass('products-card--list');
+    $('.catalog-products .products').removeClass('products-card--list');
+    $('.prices').removeClass('prices--list');
+  });
 
 
+  $('.filter__select').styler();
 
   $('.catalog__button').on('click', function () {
     $('.catalog__menu').fadeToggle();
@@ -57,19 +75,45 @@ $(function () {
     $('.header__bottom-form').fadeToggle();
   });
 
+  $('.filter__button-categories').on('click' , function(){
+    $('.suggestions ').addClass('suggestions--active');
+    $('body').addClass('fixed__menu');
+  });
 
-  $(window).on('load resize', function () {
-    if ($(window).width() < 768) {
-      $('.brands__list').slick({
-        dots: false,
-        arrows: false,
-        slidesToShow: 2,
-        slidesToScroll: 1
-      });
+  $('.suggestions__close').on('click' , function(){
+    $('.suggestions ').removeClass('suggestions--active');
+    $('body').removeClass('fixed__menu');
+  });
 
-    } else {
-      $('.brands__list').slick("unslick");
+  $(document).on('click', function (e) {
+    if (!$(e.target).closest('.filter__button-categories').length) {
+      $('.suggestions ').removeClass('suggestions--active');
+      $('body').removeClass('fixed__menu');
     }
+    e.stopPropagation();
+  });
+
+  $('.brands__list').slick({
+    dots: false,
+    arrows: false,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      }
+    ]
   });
 
 
@@ -162,18 +206,21 @@ $(function () {
   });
 
 
-  let goods = document.querySelector('[data-ref="goods"]');
-  let stock = document.querySelector('[data-ref="stock"]');
-
   let config = {
     controls: {
       scope: 'Local'
     }
   };
 
-  let mixer = mixitup(goods, config);
-  let mixerTwo = mixitup(stock, config);
+  let goods = document.querySelector('[data-ref="goods"]');
+  if (goods) {
+    let mixer = mixitup(goods, config);
+  }
 
+  let stock = document.querySelector('[data-ref="stock"]');
+  if (stock) {
+    let mixerTwo = mixitup(stock, config);
+  }
 });
 
 

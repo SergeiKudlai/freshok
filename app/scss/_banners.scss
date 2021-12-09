@@ -2,7 +2,7 @@
   padding-bottom: 72px;
 
   @include media-3 {
-    padding-bottom: 48px;
+    padding-bottom: 47px;
   }
 
   &__inner {
@@ -30,7 +30,7 @@
     color: $dark-500;
 
     @include media-1 {
-      padding-left: 16px;
+      padding-left: 14px;
     }
 
     @include media-2 {
@@ -85,7 +85,7 @@
       }
 
       @include media-3 {
-       margin-bottom: 15px;
+       margin-bottom: 14px;
       }
     }
 
@@ -110,7 +110,7 @@
     font-weight: 700;
 
     @include media-4 {
-      margin-bottom: 16px;
+      margin-bottom: 15px;
     }
   }
 
@@ -130,7 +130,7 @@
 
     @include media-3 {
       font-size: 24px;
-      margin-bottom: 71px;
+      margin-bottom: 73px;
     }
   }
 

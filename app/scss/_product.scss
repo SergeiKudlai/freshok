@@ -1,0 +1,155 @@
+.product {
+  padding: 48px 0 63px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__slider {
+    position: relative;
+    max-width: 630px;
+    width: 100%;
+    margin-right: 10px;
+  }
+
+  &__slider-item {
+    position: absolute;
+    top: 50%;
+    z-index: 20;
+    transform: translateY(-50%);
+
+    &--prev {
+      left: 22px;
+    }
+
+    &--next {
+      right: 22px;
+    }
+  }
+
+  &__slider-button {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: calc(50% - 16px);
+      left: calc(50% - 10px);
+      height: 32px;
+      width: 20px;
+      mask: url("../images/sprite.svg#slider-arrow_prev") no-repeat center/cover;
+      background-color: $dark-500;
+    }
+
+    &--next {
+      &::before {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__box {
+    max-width: 630px;
+  }
+
+  .slider-gallery {
+    border: 1px solid $silver-600;
+    border-radius: 4px;
+
+    &__img {
+      margin: 0 auto;
+    }
+  }
+
+  .info {
+    padding: 22px 0 33px;
+
+    &__title {
+      margin-bottom: 18px;
+      text-align: left;
+      line-height: 1.2;
+    }
+
+    &__inner-item {
+      &:first-child {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__list-item {
+      &:first-child {
+        margin-bottom: 18px;
+      }
+
+      &--bottom {
+        margin-bottom: 30px;
+      }
+    }
+
+    &__inner-text {
+      text-transform: uppercase;
+
+
+      &--green {
+        color: $green;
+      }
+    }
+  }
+
+  .badges {
+    &__item {
+      padding: 6px 9px;
+      font-size: 16px;
+    }
+  }
+
+  .raiting {
+    &__text {
+      padding: 4px 5px;
+      color: $silver-600;
+      line-height: 1.2;
+      letter-spacing: 0.03em;
+      font-weight: 400;
+      border-radius: 3px;
+      background-color: $header-services_bg;
+      margin-right: 7px;
+    }
+  }
+  
+  .prices {
+    flex-direction: row;
+    justify-content: stretch;
+
+    &__item {
+      line-height: 1;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+
+      &:not(:last-child){
+       margin-right: 18px;
+       font-size: 20px;
+       align-self: flex-end;
+      }
+
+      &:last-child {
+        font-size: 30px;
+        color: $green;
+      }
+    }
+  }
+}

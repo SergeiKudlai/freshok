@@ -29,6 +29,11 @@ $slider-bg:rgba(255, 255, 255, 0.8);
 $header-services_bg:#F6F6F6;
 $stock_bg:#F5F5F5;
 
+:root {
+  --star-color:rgba(193, 193, 193, 0.3);
+  --star-active:#FFB800;
+}
+
 
 %checkbox-hidden {
   width: 1px;
@@ -37,3 +42,4 @@ $stock_bg:#F5F5F5;
   position: absolute;
   clip: rect(0 0 0 0);
 }
+

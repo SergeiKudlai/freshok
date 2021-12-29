@@ -370,23 +370,22 @@
 
             <ul class="slider-gallery">
               <li class="slider-gallery__item">
-                <a class="slider-gallery__link" href="#">
+                <a class="slider-gallery__link" href="images/product/dragonfruit.jpg" data-fancybox data-width="750" data-height="750">
                   <img class="slider-gallery__img" src="images/product/dragonfruit.jpg" alt="драконий фрукт">
                 </a>
               </li>
 
               <li class="slider-gallery__item">
-                <a class="slider-gallery__link" href="#">
+                <a class="slider-gallery__link" href="images/product/dragonfruit.jpg" data-fancybox data-width="750" data-height="750">
                   <img class="slider-gallery__img" src="images/product/dragonfruit.jpg" alt="драконий фрукт">
                 </a>
               </li>
 
               <li class="slider-gallery__item">
-                <a class="slider-gallery__link" href="#">
+                <a class="slider-gallery__link" href="images/product/dragonfruit.jpg" data-fancybox data-width="750" data-height="750">
                   <img class="slider-gallery__img" src="images/product/dragonfruit.jpg" alt="драконий фрукт">
                 </a>
               </li>
-
             </ul>
           </div>
 
@@ -395,12 +394,11 @@
             <h2 class="info__title title">Питахайя красная с белой мякотью</h2>
 
             <ul class="info__inner">
-
               <li class="info__inner-item">
 
                 <ul class="info__list">
                   <li class="info__list-item">
-                    
+
                     <ul class="badges">
                       <li class="badges__item badges__item--new">
                         новинка
@@ -417,14 +415,14 @@
 
                   </li>
 
-                  <li class="info__list-item info__list-item--bottom">
+                  <li class="info__list-item info__list-item--da">
 
                     <ul class="raiting">
                       <li class="raiting__text">Код: 0111111</li>
-  
+
                       <li class="raiting__stars" data-rateyo-read-only="true" data-rateyo-rating="4"></li>
                     </ul>
-      
+
                   </li>
 
                   <li class="info__list-item">
@@ -439,13 +437,32 @@
 
                 </ul>
 
-                <span class="info__inner-text info__inner-text--green">в наличии</span>
+                <span class="info__inner-text info__inner-text--green" data-da=".info__list-item--da,576,1">в наличии</span>
               </li>
 
               <li class="info__inner-item">
 
-              </li>
+                <div class="counter" data-step="1" data-min="1" data-max="100">
+                  <button class="counter__click counter__click--minus" type="button">
+                    <span class="sr-only">уменьшить количество товара</span>
+                  </button>
 
+                  <label class="sr-only" for="count">счетчик товаров</label>
+                  <input class="counter__text" type="text" name="count" value="1" id="count">
+
+                  <button class="counter__click counter__click--plus" type="button">
+                    <span class="sr-only">увеличить количество товара</span>
+                  </button>
+                </div>
+
+                <button class="btn btn--bg" type="button">
+                  добавить в корзину
+                </button>
+
+                <button class="btn-icon" type="button">
+                  <span class="sr-only">понравившийся товар</span>
+                </button>
+              </li>
             </ul>
 
             <div class="info__description description">
@@ -454,18 +471,803 @@
                 Доставка и оплата
               </h3>
 
-              <p class="description__text">
-                Минимальная сумма заказа - 100 руб.
-                Время доставки заказа - 60-120 мин.
-                Оплата осуществляется только банковской картой.
-                Окончательная сумма заказа формируется после сбора товаров.
-              </p>
+              <div class="description__text">
+                <p>Минимальная сумма заказа - 100 руб.</p>
+                <p>Время доставки заказа - 60-120 мин.</p>
+                <p>Оплата осуществляется только банковской картой.</p>
+                <p>Окончательная сумма заказа формируется после сбора товаров.</p>
+              </div>
 
               <a class="description__link" href="#">
                 Подробнее
               </a>
             </div>
+            
           </div>
+        </div>
+
+        <div class="product__tabs">
+          <div class="product__tabs-container container">
+            <ul class="product__tabs-list tabs">
+              <li class="tabs__item">
+                <a class="tabs__link tabs__link--active" href="#tab-1">описание </a>
+              </li>
+
+              <li class="tabs__item">
+                <a class="tabs__link" href="#tab-2">характеристики</a>
+              </li>
+
+              <li class="tabs__item ">
+                <a class="tabs__link" href="#tab-3">отзывы(2)</a>
+              </li>
+            </ul>
+
+            <ul class="product__tabs-content content-tabs">
+              <li class="content-tabs__item content-tabs__item--active" id="tab-1">
+
+                <h3 class="sr-only">описание</h3>
+
+                <div class="content-tabs__description">
+
+                  <p>
+                    Питахайя – это источник питательных веществ и витаминов. Содержит витамин С, который способствует
+                    укреплению иммунной системы. В составе питайи много клетчатки, она благотворно влияет на работу ЖКТ.
+                    Оказывает противовоспалительное действие, так как фрукт богат антиоксидантами. При употреблении
+                    питахайи, понижается уровень сахара в крови, улучшается зрение и работа сердечно–сосудистой системы.
+                    Так как фрукт низкокалорийный и состоит на 90% из воды, способствует снижению веса.
+                  </p>
+
+                  <p>Витамины: С, Е, РР, витамины группы В</p>
+
+                  <p>Микроэлементы: железо, калий, кальций, магний, фосфор</p>
+
+                  <p>
+                    Внешний вид товара может отличаться от изображений, представленных на сайте.
+                  </p>
+
+                </div>
+              </li>
+
+              <li class="content-tabs__item" id="tab-2">
+
+                <h3 class="sr-only">характеристики</h3>
+
+                <div class="content-tabs__info">
+                  <p>
+                    Вес: <span>250-350г;</span>
+                  </p>
+
+                  <p>
+                    Калорийность (на 100г): <span>50 ккал;</span>
+                  </p>
+
+                  <p>
+                    Условия хранения:<span>температура от +3 до +8;</span>
+                  </p>
+
+                  <p>
+                    Другие названия:<span>Драконов фрукт, Глаз дракона;</span>
+                  </p>
+
+                  <p>
+                    Страна происхождения:<span>Вьетнам;</span>
+                  </p>
+
+                  <p>
+                    Срок хранения:<span>до 5 дней.</span>
+                  </p>
+                </div>
+              </li>
+
+              <li class="content-tabs__item tabs-reviews" id="tab-3">
+
+                <h2 class="sr-only">отзывы</h2>
+
+                <h3 class="tabs-reviews__title">мнения наших клиентов</h3>
+
+                <ul class="tabs-reviews__list">
+                  <li class="tabs-reviews__item">
+
+                    <ul class="tabs-reviews__box">
+                      <li class="tabs-reviews__info">
+
+                        <div class="tabs-reviews__user">
+
+                          <img class="tabs-reviews__user-img" src="images/user-photo.jpg" alt="Фото пользователя"
+                            width="70" height="70">
+
+                          <div class="tabs-reviews__user-info">
+
+                            <span class="tabs-reviews__user-name">Андрей</span>
+
+                            <span class="tabs-reviews__user-date">10.06.2021</span>
+
+                          </div>
+
+                        </div>
+
+                      </li>
+
+                      <li class="tabs-reviews__raiting" data-rateyo-rating="4" data-rateyo-read-only="true"></li>
+                    </ul>
+
+                    <p class="tabs-reviews__text">
+                      Яркий цвет, нежный вкус. Очень свежий и приятный, буду пробовать еще!))
+                    </p>
+
+                  </li>
+
+                  <li class="tabs-reviews__item">
+
+                    <ul class="tabs-reviews__box">
+                      <li class="tabs-reviews__info">
+
+                        <div class="tabs-reviews__user">
+
+                          <img class="tabs-reviews__user-img" src="images/user-photo.jpg" alt="Фото пользователя"
+                            width="70" height="70">
+
+                          <div class="tabs-reviews__user-info">
+
+                            <span class="tabs-reviews__user-name">Екатерина Белая</span>
+
+                            <span class="tabs-reviews__user-date">7.06.2021</span>
+
+                          </div>
+
+                        </div>
+
+                      </li>
+
+                      <li class="tabs-reviews__raiting" data-rateyo-rating="5" data-rateyo-read-only="true"></li>
+                    </ul>
+
+                    <p class="tabs-reviews__text">
+                      Цвет, конечно, очень насыщенный! Ожидаешь, что и вкус будет такой же яркий (просто взрыв), но нет.
+                      Вкус "сдержанно-сладкий" и очень-очень свежий! Рад, что есть такая возможность - пробовать
+                      экзотические фрукты.
+                    </p>
+
+                  </li>
+                </ul>
+
+                <h3 class="tabs-reviews__title">оставить отзыв</h3>
+
+                <ul class="tabs-reviews__grade grade">
+                  <li class="grade__item">
+                    Ваша оценка *
+                  </li>
+
+                  <li class="grade__raiting" data-rateyo-rating="0"></li>
+                </ul>
+
+                <form class="tabs-reviews__form form-tabs" action="#">
+
+                  <div class="form-tabs__inner">
+
+                    <div class="form-tabs__box">
+                      <label class="form-tabs__title" for="review">Ваш отзыв *</label>
+                      <textarea class="form-tabs__textarea" name="review" id="review" placeholder="Введите текст отзыва"
+                        required></textarea>
+                    </div>
+
+                    <div class="form-tabs__box">
+                      <label class="form-tabs__title" for="name">Имя</label>
+                      <input class="form-tabs__input" type="text" id="name" name="name" placeholder="Введите ваше имя"
+                        required>
+
+                      <label class="form-tabs__title" for="Email">Email *</label>
+                      <input class="form-tabs__input" type="text" id="Email" name="Email"
+                        placeholder="youremail@mail.com" required>
+                    </div>
+
+                  </div>
+
+                  <label class="tabs-save" for="save">
+                    <input class="tabs-save__input sr-only" type="checkbox" name="save" id="save">
+                    <span class="tabs-save__span"></span>
+                    Сохранить моё имя, email и адрес сайта в этом браузере для последующих моих комментариев.
+                  </label>
+
+                  <button class="form-tabs__btn">Оставить отзыв</button>
+
+                </form>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="interesting">
+
+        <div class="interesting__container container">
+
+          <h2 class="interesting__title">вас может заинтересовать</h2>
+
+          <ul class="interesting__buttons">
+            <li class="interesting__button">
+              <button class="interesting__btn interesting__btn--prev"></button>
+              <span class="sr-only">предыдущий слайд</span>
+            </li>
+
+            <li class="interesting__button">
+              <button class="interesting__btn interesting__btn--next"></button>
+              <span class="sr-only">следующий слайд</span>
+            </li>
+          </ul>
+
+          <ul class="interesting__inner products">
+
+            <li class="products__box mix category-b">
+
+              <article class="products__items products-card">
+
+                <ul class="products-card__badges badges">
+                  <li class="badges__item badges__item--new badges__item--on">
+                    новинка
+                  </li>
+
+                  <li class="badges__item badges__item--sale badges__item--on">
+                    -50%
+                  </li>
+
+                  <li class="badges__item badges__item--hit">
+                    хит
+                  </li>
+                </ul>
+
+                <button class="products-card__button" type="button">
+                  <span class="sr-only">Понравившейся товар</span>
+                </button>
+
+                <a class="products-card__image" href="images/goods/pineapple.jpg" data-fancybox data-width="640"
+                  data-height="480">
+                  <img class="products-card__img" src="images/goods/pineapple.jpg" alt="Ананас" width="300"
+                    height="234">
+                </a>
+
+                <div class="products-card__info">
+
+                  <h3 class="products-card__name">
+                    <a class="products-card__link" href="#">
+                      Ананас, 1кг
+                    </a>
+                  </h3>
+
+                  <div class="products-card__box">
+
+                    <ul class="products-card__prices prices">
+                      <li class="prices__item prices__item--old">
+                        1999
+                      </li>
+
+                      <li class="prices__item ">
+                        999
+                      </li>
+                    </ul>
+
+                    <div class="counter" data-step="1" data-min="1" data-max="100">
+                      <button class="counter__click counter__click--minus" type="button">
+                        <span class="sr-only">уменьшить количество товара</span>
+                      </button>
+
+                      <label class="sr-only" for="count">счетчик товаров</label>
+                      <input class="counter__text" type="text" name="count" value="1" id="count">
+
+                      <button class="counter__click counter__click--plus" type="button">
+                        <span class="sr-only">увеличить количество товара</span>
+                      </button>
+                    </div>
+
+                    <button class="products-card__basket" type="button">
+                      <span class="sr-only">в корзину</span>
+                    </button>
+
+                  </div>
+
+                </div>
+
+              </article>
+
+            </li>
+
+            <li class="products__box mix category-b">
+
+              <article class="products__items products-card">
+
+                <ul class="products-card__badges badges">
+                  <li class="badges__item badges__item--new">
+                    новинка
+                  </li>
+
+                  <li class="badges__item badges__item--sale">
+                    -50%
+                  </li>
+
+                  <li class="badges__item badges__item--hit">
+                    хит
+                  </li>
+                </ul>
+
+                <button class="products-card__button" type="button">
+                  <span class="sr-only">Понравившейся товар</span>
+                </button>
+
+                <a class="products-card__image" href="images/goods/lemon.jpg" data-fancybox data-width="640"
+                  data-height="480">
+                  <img class="products-card__img" src="images/goods/lemon.jpg" alt="лемон" width="300" height="234">
+                </a>
+
+                <div class="products-card__info">
+
+                  <h3 class="products-card__name">
+                    <a class="products-card__link" href="#">
+                      Лимон, 1кг
+                    </a>
+                  </h3>
+
+                  <div class="products-card__box">
+
+                    <ul class="products-card__prices prices">
+                      <li class="prices__item prices__item--old">
+
+                      </li>
+
+                      <li class="prices__item ">
+                        199
+                      </li>
+                    </ul>
+
+                    <div class="counter" data-step="1" data-min="1" data-max="100">
+                      <button class="counter__click counter__click--minus" type="button">
+                        <span class="sr-only">уменьшить количество товара</span>
+                      </button>
+
+                      <label class="sr-only" for="count">счетчик товаров</label>
+                      <input class="counter__text" type="text" name="count" value="1" id="count">
+
+                      <button class="counter__click counter__click--plus" type="button">
+                        <span class="sr-only">увеличить количество товара</span>
+                      </button>
+                    </div>
+
+                    <button class="products-card__basket" type="button">
+                      <span class="sr-only">в корзину</span>
+                    </button>
+
+                  </div>
+
+                </div>
+
+              </article>
+
+            </li>
+
+            <li class="products__box mix category-b">
+
+              <article class="products__items products-card">
+
+                <ul class="products-card__badges badges">
+                  <li class="badges__item badges__item--new">
+                    новинка
+                  </li>
+
+                  <li class="badges__item badges__item--sale">
+                    -50%
+                  </li>
+
+                  <li class="badges__item badges__item--hit badges__item--on">
+                    хит
+                  </li>
+                </ul>
+
+                <button class="products-card__button" type="button">
+                  <span class="sr-only">Понравившейся товар</span>
+                </button>
+
+                <a class="products-card__image" href="images/goods/dragon_fruit.jpg" data-fancybox data-width="640"
+                  data-height="480">
+                  <img class="products-card__img" src="images/goods/dragon_fruit.jpg" alt="Драгон фрукт" width="300"
+                    height="234">
+                </a>
+
+                <div class="products-card__info">
+
+                  <h3 class="products-card__name">
+                    <a class="products-card__link" href="#">
+                      Питахайя красная с белой мякотью, 1шт
+                    </a>
+                  </h3>
+
+                  <div class="products-card__box">
+
+                    <ul class="products-card__prices prices">
+                      <li class="prices__item prices__item--old">
+
+                      </li>
+
+                      <li class="prices__item ">
+                        999
+                      </li>
+                    </ul>
+
+                    <div class="counter" data-step="1" data-min="1" data-max="100">
+                      <button class="counter__click counter__click--minus" type="button">
+                        <span class="sr-only">уменьшить количество товара</span>
+                      </button>
+
+                      <label class="sr-only" for="count">счетчик товаров</label>
+                      <input class="counter__text" type="text" name="count" value="1" id="count">
+
+                      <button class="counter__click counter__click--plus" type="button">
+                        <span class="sr-only">увеличить количество товара</span>
+                      </button>
+                    </div>
+                    <button class="products-card__basket" type="button">
+                      <span class="sr-only">в корзину</span>
+                    </button>
+
+                  </div>
+
+                </div>
+
+              </article>
+
+            </li>
+
+            <li class="products__box mix category-c">
+
+              <article class="products__items products-card">
+
+                <ul class="products-card__badges badges">
+                  <li class="badges__item badges__item--new">
+                    новинка
+                  </li>
+
+                  <li class="badges__item badges__item--sale">
+                    -50%
+                  </li>
+
+                  <li class="badges__item badges__item--hit">
+                    хит
+                  </li>
+                </ul>
+
+                <button class="products-card__button" type="button">
+                  <span class="sr-only">Понравившейся товар</span>
+                </button>
+
+                <a class="products-card__image" href="images/goods/ketchup.jpg" data-fancybox data-width="640"
+                  data-height="480">
+                  <img class="products-card__img" src="images/goods/ketchup.jpg" alt="Кетчуп" width="300" height="234">
+                </a>
+
+                <div class="products-card__info">
+
+                  <h3 class="products-card__name">
+                    <a class="products-card__link" href="#">Кетчуп томатный детский органический
+                      Bio-Zentrale 500мл, 1 шт</a>
+                  </h3>
+
+                  <div class="products-card__box">
+
+                    <ul class="products-card__prices prices">
+                      <li class="prices__item prices__item--old">
+
+                      </li>
+
+                      <li class="prices__item ">
+                        600
+                      </li>
+                    </ul>
+
+                    <div class="counter" data-step="1" data-min="1" data-max="100">
+                      <button class="counter__click counter__click--minus" type="button">
+                        <span class="sr-only">уменьшить количество товара</span>
+                      </button>
+
+                      <label class="sr-only" for="count">счетчик товаров</label>
+                      <input class="counter__text" type="text" name="count" value="1" id="count">
+
+                      <button class="counter__click counter__click--plus" type="button">
+                        <span class="sr-only">увеличить количество товара</span>
+                      </button>
+                    </div>
+                    <button class="products-card__basket" type="button">
+                      <span class="sr-only">в корзину</span>
+                    </button>
+
+                  </div>
+
+                </div>
+
+              </article>
+
+            </li>
+
+            <li class="products__box mix category-c">
+
+              <article class="products__items products-card">
+
+                <ul class="products-card__badges badges">
+                  <li class="badges__item badges__item--new">
+                    новинка
+                  </li>
+
+                  <li class="badges__item badges__item--sale">
+                    -50%
+                  </li>
+
+                  <li class="badges__item badges__item--hit badges__item--on">
+                    хит
+                  </li>
+                </ul>
+
+                <button class="products-card__button" type="button">
+                  <span class="sr-only">Понравившейся товар</span>
+                </button>
+
+                <a class="products-card__image" href="images/goods/carrot.jpg" data-fancybox data-width="640"
+                  data-height="480">
+                  <img class="products-card__img" src="images/goods/carrot.jpg" alt="Морковь" width="300" height="234">
+                </a>
+
+                <div class="products-card__info">
+
+                  <h3 class="products-card__name">
+                    <a class="products-card__link" href="#">
+                      Морковь молодая с бабушкиной грядки, 1кг
+                    </a>
+                  </h3>
+
+                  <div class="products-card__box">
+
+                    <ul class="products-card__prices prices">
+                      <li class="prices__item prices__item--old">
+
+                      </li>
+
+                      <li class="prices__item ">
+                        49
+                      </li>
+                    </ul>
+
+                    <div class="counter" data-step="1" data-min="1" data-max="100">
+                      <button class="counter__click counter__click--minus" type="button">
+                        <span class="sr-only">уменьшить количество товара</span>
+                      </button>
+
+                      <label class="sr-only" for="count">счетчик товаров</label>
+                      <input class="counter__text" type="text" name="count" value="1" id="count">
+
+                      <button class="counter__click counter__click--plus" type="button">
+                        <span class="sr-only">увеличить количество товара</span>
+                      </button>
+                    </div>
+
+                    <button class="products-card__basket" type="button">
+                      <span class="sr-only">в корзину</span>
+                    </button>
+
+                  </div>
+
+                </div>
+
+              </article>
+
+            </li>
+
+            <li class="products__box mix category-c">
+
+              <article class="products__items products-card">
+
+                <ul class="products-card__badges badges">
+                  <li class="badges__item badges__item--new">
+                    новинка
+                  </li>
+
+                  <li class="badges__item badges__item--sale badges__item--on">
+                    -50%
+                  </li>
+
+                  <li class="badges__item badges__item--hit">
+                    хит
+                  </li>
+                </ul>
+
+                <button class="products-card__button" type="button">
+                  <span class="sr-only">Понравившейся товар</span>
+                </button>
+
+                <a class="products-card__image" href="images/goods/juice.jpg" data-fancybox data-width="640"
+                  data-height="480">
+                  <img class="products-card__img" src="images/goods/juice.jpg" alt="сок" width="300" height="234">
+                </a>
+
+                <div class="products-card__info">
+
+                  <h3 class="products-card__name">
+                    <a class="products-card__link" href="#">
+                      Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольн...
+                    </a>
+                  </h3>
+
+                  <div class="products-card__box">
+
+                    <ul class="products-card__prices prices">
+                      <li class="prices__item prices__item--old">
+                        299
+                      </li>
+
+                      <li class="prices__item ">
+                        199
+                      </li>
+                    </ul>
+
+                    <div class="counter" data-step="1" data-min="1" data-max="100">
+                      <button class="counter__click counter__click--minus" type="button">
+                        <span class="sr-only">уменьшить количество товара</span>
+                      </button>
+
+                      <label class="sr-only" for="count">счетчик товаров</label>
+                      <input class="counter__text" type="text" name="count" value="1" id="count">
+
+                      <button class="counter__click counter__click--plus" type="button">
+                        <span class="sr-only">увеличить количество товара</span>
+                      </button>
+                    </div>
+
+                    <button class="products-card__basket" type="button">
+                      <span class="sr-only">в корзину</span>
+                    </button>
+
+                  </div>
+
+                </div>
+
+              </article>
+
+            </li>
+
+            <li class="products__box mix category-d">
+
+              <article class="products__items products-card">
+
+                <ul class="products-card__badges badges">
+                  <li class="badges__item badges__item--new badges__item--on">
+                    новинка
+                  </li>
+
+                  <li class="badges__item badges__item--sale">
+                    -50%
+                  </li>
+
+                  <li class="badges__item badges__item--hit">
+                    хит
+                  </li>
+                </ul>
+
+                <button class="products-card__button" type="button">
+                  <span class="sr-only">Понравившейся товар</span>
+                </button>
+
+                <a class="products-card__image" href="images/goods/coffee.jpg" data-fancybox data-width="640"
+                  data-height="480">
+                  <img class="products-card__img" src="images/goods/coffee.jpg" alt="кофе" width="300" height="234">
+                </a>
+
+                <div class="products-card__info">
+
+                  <h3 class="products-card__name">
+                    <a class="products-card__link" href="#">
+                      Кофе с коноплей органический Caffé Salomoni 250г
+                    </a>
+                  </h3>
+
+                  <div class="products-card__box">
+
+                    <ul class="products-card__prices prices">
+                      <li class="prices__item prices__item--old">
+
+                      </li>
+
+                      <li class="prices__item ">
+                        877
+                      </li>
+                    </ul>
+
+                    <div class="counter" data-step="1" data-min="1" data-max="100">
+                      <button class="counter__click counter__click--minus" type="button">
+                        <span class="sr-only">уменьшить количество товара</span>
+                      </button>
+
+                      <label class="sr-only" for="count">счетчик товаров</label>
+                      <input class="counter__text" type="text" name="count" value="1" id="count">
+
+                      <button class="counter__click counter__click--plus" type="button">
+                        <span class="sr-only">увеличить количество товара</span>
+                      </button>
+                    </div>
+
+                    <button class="products-card__basket" type="button">
+                      <span class="sr-only">в корзину</span>
+                    </button>
+
+                  </div>
+                </div>
+              </article>
+
+            </li>
+
+            <li class="products__box mix category-a">
+
+              <article class="products__items products-card">
+
+                <ul class="products-card__badges badges">
+                  <li class="badges__item badges__item--new badges__item--on ">новинка
+                  </li>
+
+                  <li class="badges__item badges__item--sale">-50%</li>
+
+                  <li class="badges__item badges__item--hit">хит</li>
+                </ul>
+
+                <button class="products-card__button" type="button">
+                  <span class="sr-only">Понравившейся товар</span>
+                </button>
+
+                <a class="products-card__image" href="images/goods/paprik.jpg" data-fancybox data-width="640"
+                  data-height="480">
+                  <img class="products-card__img" src="images/goods/paprik.jpg" alt="Перец" width="300" height="234">
+                </a>
+
+                <div class="products-card__info">
+
+                  <h3 class="products-card__name">
+                    <a class="products-card__link" href="#" target="_blank">
+                      Перец оранжевый, 1кг
+                    </a>
+                  </h3>
+
+                  <div class="products-card__box">
+
+                    <ul class="products-card__prices prices">
+                      <li class="prices__item prices__item--old">
+
+                      </li>
+
+                      <li class="prices__item">
+                        349
+                      </li>
+                    </ul>
+
+                    <div class="counter" data-step="1" data-min="1" data-max="100">
+                      <button class="counter__click counter__click--minus" type="button">
+                        <span class="sr-only">уменьшить количество товара</span>
+                      </button>
+
+                      <label class="sr-only" for="count">счетчик товаров</label>
+                      <input class="counter__text" type="text" name="count" value="1" id="count">
+
+                      <button class="counter__click counter__click--plus" type="button">
+                        <span class="sr-only">увеличить количество товара</span>
+                      </button>
+                    </div>
+
+                    <button class="products-card__basket" type="button">
+                      <span class="sr-only">в корзину</span>
+                    </button>
+
+                  </div>
+
+                </div>
+
+              </article>
+
+            </li>
+          </ul>
+
         </div>
       </section>
 

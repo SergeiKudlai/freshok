@@ -1,0 +1,101 @@
+.interesting {
+  margin-bottom: 46px;
+
+  &__container {
+    position: relative;
+  }
+
+  &__title {
+    font-size: 30px;
+    font-family: "Ruda", sans-serif;
+    letter-spacing: 0.03em;
+    line-height: 1.2;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+
+    @include media-3 {
+      font-size: 26px;
+    }
+
+    @include media-4 {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    border: 1px solid $silver-600;
+    border-radius: 6px;
+
+    @include media-4 {
+      display: none;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: calc(50% - 16px);
+      left: calc(50% - 9px);
+      width: 19px;
+      height: 32px;
+      mask: url("../images/sprite.svg#next-arrow") no-repeat center/cover;
+      background-color: $dark-500;
+    }
+
+    &--prev {
+      right: 105px;
+
+      &::before {
+        transform: rotate(-180deg);
+      }
+    }
+
+    &--next {
+      right: 15px;
+    }
+  }
+
+  .products {
+    display: flex;
+  }
+
+  .products-card {
+    &__name {
+      height: 100vh;
+    }
+
+    &__button {
+      background-color: transparent;
+    }
+  }
+
+  .slick-list {
+    margin: 0 -15px;
+  }
+
+  .slick-slide {
+    margin: 0 15px;
+
+    @include media-3 {
+     margin: 0 5px;
+    }
+
+    @include media-4 {
+      margin: 0 2.5px;
+    }
+  }
+
+  .slick-dots {
+    bottom: -18px;
+    column-gap: 10px;
+    left: 50%;
+    transform: translate(-50%);
+
+    button {
+      margin-right: 0;
+    }
+  }
+}

@@ -547,8 +547,10 @@
 	&__button {
 		position: relative;
 		outline: transparent;
-		width: 44px;
-		height: 44px;
+		width: 50px;
+		height: 50px;
+		border-radius: 3px;
+		transition: background-color 0.5s ease-in-out;
 
 		&::before {
 			content: "";
@@ -556,7 +558,7 @@
 			top: calc(50% - 15px);
 			left: calc(50% - 16px);
 			mask: url("../images/sprite.svg#icon-cart") no-repeat center/ cover;
-			background-color: #ffffff;
+			background-color: $white;
 			margin-right: 8px;
 			width: 32px;
 			height: 30px;
@@ -567,7 +569,21 @@
 			}
 		}
 
-		@include media-3 {
+		&:focus {
+			background-color: rgba(255, 255, 255, 0.1);
+			box-shadow: inset 0 0 0 3px $focus;
+		}
+
+		&:hover {
+			background-color: rgba(255,255,255, 0.1);
+		}
+
+		&:active {
+			background-color: rgba(255,255,255, 0.1);
+
+			&::before {
+				background-color: rgba(255, 255, 255, 0.5);
+			}
 		}
 	}
 

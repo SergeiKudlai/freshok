@@ -7,8 +7,6 @@ const autoprefixer = require('gulp-autoprefixer');
 const del = require('del');
 const sprite = require('gulp-svg-sprite');
 
-
-
 function browsersync() {
 	browserSync.init({
 		server: {
@@ -17,7 +15,6 @@ function browsersync() {
 		notify: false
 	})
 }
-
 
 function cleanDist() {
 	return del('dist')
@@ -51,7 +48,6 @@ function svgSprite() {
 		.pipe(dest('app/images'))
 }
 
-
 function scripts() {
 	return src([
 		'node_modules/jquery/dist/jquery.js',
@@ -69,8 +65,6 @@ function scripts() {
 		.pipe(browserSync.stream())
 }
 
-
-
 function styles() {
 	return src([
 		'node_modules/jquery-form-styler/dist/jquery.formstyler.css',
@@ -86,7 +80,6 @@ function styles() {
 		.pipe(browserSync.stream())
 }
 
-
 function build() {
 	return src([
 		'app/css/style.min.css',
@@ -98,15 +91,12 @@ function build() {
 		.pipe(dest('dist'))
 }
 
-
-
 function watching() {
 	watch(['app/scss/**/*.scss'], styles);
 	watch(['app/images/svg/**/*.svg'],svgSprite);    
 	watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
 	watch(['app/*.html']).on('change', browserSync.reload);
 }
-
 
 exports.styles = styles;
 exports.watching = watching;
